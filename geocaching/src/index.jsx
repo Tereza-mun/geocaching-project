@@ -1,10 +1,10 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import { render } from 'react-dom';
-import Home from './Home';
-import About from './About';
-import Rules from './Rules';
-import './style.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { render } from "react-dom";
+import Home from "./Home";
+import About from "./About";
+import Rules from "./Rules";
+import "./style.css";
 
 const App = () => (
   <Router>
@@ -15,7 +15,7 @@ const App = () => (
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/about">About us</Link>
           </li>
           <li>
             <Link to="/rules">Rules</Link>
@@ -38,4 +38,4 @@ const App = () => (
   </Router>
 );
 
-render(<App />, document.querySelector('#app'));
+render(<App />, document.querySelector("#app"));
