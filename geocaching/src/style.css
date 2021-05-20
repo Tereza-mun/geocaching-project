@@ -40,6 +40,9 @@ body {
 
 .paragraph {
   font-size: 1.7rem;
+}
+
+p {
   font-family: "PT Sans Narrow";
 }
 

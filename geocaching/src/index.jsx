@@ -4,6 +4,7 @@ import { render } from "react-dom";
 import Home from "./Home";
 import About from "./About";
 import Rules from "./Rules";
+
 import "./style.css";
 
 const App = () => (
@@ -17,6 +18,7 @@ const App = () => (
           <li>
             <Link to="/about">About us</Link>
           </li>
+
           <li>
             <Link to="/rules">Rules</Link>
           </li>
