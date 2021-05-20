@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 const About = () => {
   return (
     <>
-      <h2>ABOUT US</h2>
-      <p>
+      <h2 className="heading">ABOUT US</h2>
+      <p className="paragraph">
         Why we connected? Who we are?
         <br />
         <br />

@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 const Rules = () => {
   return (
     <>
-      <h2>Rules</h2>
-      <p>
+      <h2 className="heading">Rules</h2>
+      <p className="paragraph">
         GAME RULES
         <br />
         <br />

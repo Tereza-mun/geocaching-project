@@ -1,13 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-
-* {
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
 
 html {
-  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  font-family: 'Bangers', sans-serif;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-image: url('leaves_background.jpg');
+  background-size: cover;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.heading,
+.paragraph {
+  text-align: center;
+  max-width: 75%;
+  /* margin: 0 auto; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 
 .container {
   max-width: 26rem;
   margin-right: auto;
@@ -26,4 +48,4 @@ header {
   height: 10rem;
   background-image: url(./img/rocket.svg);
   background-size: contain;
-}
+} */
