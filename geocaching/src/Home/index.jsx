@@ -4,14 +4,9 @@ const Home = () => {
     <>
       <h2 className="heading">HOME</h2>
       <p className="paragraph">
-        GEOCACHING HOMEPAGE
-        <br />
-        <br />
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium qui
-        impedit, quod odio, magnam dignissimos dolores eligendi possimus
-        repellendus consequuntur commodi provident? Ut assumenda nisi vel a
-        temporib cumque iure laborum nesciunt dignissimos suscipit esse
-        delectus.
+        Welcome to the ultimate geocaching game in Stromovka. Please read the
+        rules carefully first, get your mobile phone and knowledge ready and
+        let’s get this adventure started!
       </p>
     </>
   );

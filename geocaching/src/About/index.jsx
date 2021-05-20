@@ -4,15 +4,10 @@ const About = () => {
     <>
       <h2 className="heading">ABOUT US</h2>
       <p className="paragraph">
-        Why we connected? Who we are?
-        <br />
-        <br />
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium qui
-        impedit, quod odio, magnam dignissimos dolores eligendi possimus
-        repellendus consequuntur commodi provident? Ut assumenda nisi vel a
-        temporibus dolorum eligendi? Repellendus autem nulla ipsum odit vero.
-        Dolore enim nostrum, dolor, eveniet similique eaque corporis autem
-        quisquam saepe assumenda, quae quaerat! Maxime dolorem voluptates quae
+        We are 2 sports enthusiasts who can’t stand still, we share the same
+        temper as well as passion for physical activity and that is why we
+        created this game 😊 We hope you enjoy it as much as we did while
+        creating it!
       </p>
     </>
   );
