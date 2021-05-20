@@ -8,7 +8,7 @@ import "./style.css";
 
 const App = () => (
   <Router>
-    <div>
+    <div className="container">
       <nav className="nav">
         <ul className="nav-ul">
           <li>

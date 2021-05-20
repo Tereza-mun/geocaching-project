@@ -1,9 +1,11 @@
-import React from 'react';
+import React from "react";
+import "./style.css";
+
 const Rules = () => {
   return (
     <>
-      <h2 className="heading">Rules</h2>
-      <ul className="paragraph rules--list">
+      <h2 className="heading">Geocache Rules</h2>
+      <ul className="paragraph-rules--list">
         <li>
           You will be given a starting point where you will find the first
           question. As soon as you get to the location, your GPS will validate
