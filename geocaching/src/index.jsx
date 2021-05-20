@@ -9,8 +9,8 @@ import "./style.css";
 const App = () => (
   <Router>
     <div>
-      <nav>
-        <ul>
+      <nav className="nav">
+        <ul className="nav-ul">
           <li>
             <Link to="/">Home</Link>
           </li>
