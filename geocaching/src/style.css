@@ -46,8 +46,6 @@ p {
   font-family: "PT Sans Narrow";
 }
 
-/* treba doplnit dajake flex-basis na vyrovnanie about us tiez */
-
 ul.nav-ul {
   background-size: 50px 50px;
   background-repeat: no-repeat;
@@ -56,10 +54,6 @@ ul.nav-ul {
   list-style-type: none;
   padding-left: 0;
   justify-content: space-around;
-}
-
-ul {
-  margin-left: 0;
 }
 
 .nav-ul li a {
@@ -74,23 +68,3 @@ h3 {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-/* 
-.container {
-  max-width: 26rem;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 4rem;
-}
-
-.logo {
-  width: 10rem;
-  height: 10rem;
-  background-image: url(./img/rocket.svg);
-  background-size: contain;
-} */
