@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './transparent-logo.png';
-import './style.css';
+import '../style.css';
 
 const Home = () => {
   return (
