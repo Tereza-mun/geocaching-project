@@ -1,13 +1,13 @@
-import React from "react";
-import "./style.css";
-import logo from "./kids-with-map.png";
+import React from 'react';
+import './style.css';
+import logo from './kids-with-map.png';
 
 const Rules = () => {
   return (
     <>
       <h2 className="heading">Geocache Rules</h2>
-      <img className="img-rules" src={logo}></img>
-      <ul className="paragraph-rules--list">
+      <img className="logo-rules" src={logo}></img>
+      <ul className="paragraph rules--list">
         <li>
           You will be given a starting point where you will find the first
           question. As soon as you get to the location, your GPS will validate
