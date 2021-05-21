@@ -30,25 +30,23 @@ body {
   border: 2px solid black;
 } */
 
-.paragraph {
+.heading,
+.subheading {
   text-align: center;
   max-width: 75%;
+  margin: 5px auto;
+}
+
+.paragraph {
+  text-align: center;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
   font-size: 1.35rem;
   font-family: 'PT Sans Narrow';
 }
 
-.heading,
-.subheading {
-  /* margin-top: 5px;
-  margin-bottom: 5px; */
-  text-align: center;
-  max-width: 75%;
-  /* margin-left: auto;
-  margin-right: auto; */
-  margin: 5px auto;
-}
+/* Navbar styling */
 
 .nav-ul {
   background-size: 50px 50px;
