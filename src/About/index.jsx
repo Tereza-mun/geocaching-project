@@ -5,12 +5,13 @@ import "./style.css";
 const About = () => {
   return (
     <>
-      <h2 className="heading">ABOUT PROJECT</h2>
+      <h2 className="heading">ABOUT US</h2>
       <img className="logo-about" src={logo}></img>
       <p className="paragraph-about">
-        Geocache in Stromovka is a project which was created in order to
-        successfully complete 3 months Certification Program - Web Development
-        Czechitas Course.
+        We are 2 sports enthusiasts who can’t stand still, we share the same
+        temper as well as passion for physical activity and that is why we
+        created this game. We hope you enjoy it as much as we enjoyed creating
+        it!
       </p>
     </>
   );
