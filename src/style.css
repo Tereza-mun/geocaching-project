@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   font-family: 'Bangers', sans-serif;
   background-image: url('leaves_background.jpg');
   background-size: cover;
@@ -30,25 +30,8 @@ body {
   border: 2px solid black;
 } */
 
-.heading,
-.subheading {
-  text-align: center;
-  max-width: 75%;
-  margin: 5px auto;
-}
-
-.paragraph {
-  text-align: center;
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1.35rem;
-  font-family: 'PT Sans Narrow';
-}
-
-/* Navbar styling */
-
 .nav-ul {
+  font-size: 1.5rem;
   background-size: 50px 50px;
   background-repeat: no-repeat;
   display: flex;
@@ -63,50 +46,4 @@ body {
   color: black;
   text-decoration: none;
   padding: 5px 5px;
-}
-
-/* **************************** */
-/* Home page */
-
-.logo-home {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-/* **************************** */
-/* About page */
-
-.logo-about {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-/* ************************* */
-/* Rules page */
-
-.rules--list {
-  /* font-family: 'PT Sans Narrow'; */
-  font-size: 1.3rem;
-  padding-left: 5px;
-  text-align: center;
-}
-
-.rules--list li {
-  padding-bottom: 5px;
-  list-style-type: circle;
-  /* font-family: 'PT Sans Narrow'; */
-  font-size: 1.3rem;
-  padding-left: 5px;
-  text-align: left;
-}
-
-.logo-rules {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%;
 }
