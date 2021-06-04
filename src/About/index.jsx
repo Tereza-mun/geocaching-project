@@ -1,9 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
 import logo from "../img/logo-about.png";
-=======
-import logo from "./transparent-logo--with-smile.png";
->>>>>>> 5a71fdf91422a86e6d87d22c13498c7f59f063fc
 import "./style.css";
 
 const About = () => {
