@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap");
 
 html {
   box-sizing: border-box;
@@ -14,8 +14,8 @@ html {
 
 body {
   /* font-size: 1.5rem; */
-  font-family: 'Bangers', sans-serif;
-  background-image: url('leaves_background.jpg');
+  font-family: "Bangers", sans-serif;
+  background-image: url("./img/background.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -26,9 +26,10 @@ body {
   padding-right: 3rem;
 }
 
-/* .container {
-  border: 2px solid black;
-} */
+.container {
+  margin: 0 auto;
+  /* border: 1px solid black; */
+}
 
 .nav-ul {
   font-size: 1.5rem;

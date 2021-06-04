@@ -1,0 +1,35 @@
+.logo-welcome {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.subheading-welcome {
+  font-size: 2rem;
+  text-align: left;
+  margin-top: 2.1rem;
+  margin-bottom: 0.7rem;
+  font-family: "Bangers", sans-serif;
+}
+
+.paragraph-welcome {
+  text-align: left;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.4rem;
+  font-family: "PT Sans Narrow";
+}
+
+.paragraph-welcome p {
+  margin-top: 1px;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+button {
+  margin-top: 15px;
+}

@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap");
 
 .heading,
 .subheading {
@@ -20,17 +20,27 @@
 
 .paragraph-rules {
   /* zmenen z center */
-  text-align: justify;
-  max-width: 90%;
+  text-align: center;
+  max-width: 95%;
   margin-left: auto;
   margin-right: auto;
   font-size: 1.2rem;
-  font-family: 'PT Sans Narrow';
+  font-family: "PT Sans Narrow";
 }
 
-.logo-rules {
+/* .logo-rules {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 30%;
+} */
+
+button {
+  display: block;
+  font-family: "Bangers", sans-serif;
+  font-size: 1.4rem;
+  padding: 0.5em 3em;
+  border: 2px solid black;
+  background: transparent;
+  margin: 0 auto;
 }

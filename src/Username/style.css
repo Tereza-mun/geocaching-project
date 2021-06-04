@@ -1,0 +1,32 @@
+.username-form {
+  padding-top: 2.4rem;
+  text-align: center;
+}
+
+input {
+  font-family: "PT Sans Narrow";
+  font-size: 1.2rem;
+  width: 55%;
+  background-color: #fcfcfc;
+  border: 0;
+  border-bottom: 2px solid black;
+  padding: 7px;
+}
+
+.paragraph-username {
+  text-align: center;
+  max-width: 90%;
+  margin-top: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+  font-family: "PT Sans Narrow";
+}
+
+.logo-username {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
