@@ -9,14 +9,15 @@ import Welcome from "./Welcome";
 import Essentials from "./Essentials";
 import Map00 from "./Map00";
 import Map01 from "./Map01";
+import Congrat from "./Congrat";
 
 import "./style.css";
 
 const App = () => {
   const [username, setUsername] = useState("");
 
-  const handleHello = (welcomeName) => {
-    setUsername(welcomeName);
+  const handleHello = (name) => {
+    setUsername(name);
   };
 
   return (
@@ -62,6 +63,9 @@ const App = () => {
           </Route>
           <Route exact path="/map01">
             <Map01 />
+          </Route>
+          <Route exact path="/congratulation">
+            <Congrat usernameW={username} />
           </Route>
         </Switch>
       </div>
