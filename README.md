@@ -1,6 +1,5 @@
 # geocaching-project
 
-TERMINAL:
 npx create-czechitas-app
 
 npm install react-router-dom
