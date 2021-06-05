@@ -79,7 +79,7 @@ const App = () => {
             <Essentials />
           </Route>
           <Route exact path="/map00">
-            <Map00 currentQuestion={pinpoints[0]} />
+            <Map00 currentQuestion={currentQuestion} />
           </Route>
           <Route exact path="/question">
             <Question currentQuestion={currentQuestion} score={handleCorrect} />

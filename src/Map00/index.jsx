@@ -11,6 +11,7 @@ import infoUrl from "../img/magnifier.svg";
 import "./marker.css";
 import "./zoom.css";
 import { pinpoints } from "./pinpoints.js";
+import { useHistory } from "react-router-dom";
 
 const Map00 = (props) => {
   const getDistance = (point1, point2) => {
@@ -29,6 +30,8 @@ const Map00 = (props) => {
 
     return d;
   };
+
+  const history = useHistory();
 
   const [inRange, setInRange] = useState(false);
 
@@ -50,7 +53,11 @@ const Map00 = (props) => {
     }
   };
 
-  const message = inRange ? "Click to reveal question" : "Get closer";
+  const handleNextQuestion = () => {
+    history.push("/question");
+  };
+
+  const message = inRange ? "Show question" : "Get closer";
 
   return (
     <>
@@ -95,22 +102,20 @@ const Map00 = (props) => {
         </div>
 
         <Marker
-          latitude={50.1045369}
-          longitude={14.4310347}
+          latitude={props.currentQuestion.latitude}
+          longitude={props.currentQuestion.longitude}
           offsetLeft={-25}
           offsetTop={-50}
         >
-          <button
+          <button className="marker-button">
+            <img src={spendlikUrl} width={50} height={50} />
+          </button>
+          {/* <button
+            onClick={handleNextQuestion}
             className={inRange ? "btn btn--on" : "btn"}
             disabled={!inRange}
           >
             {message}
-          </button>
-          {/* <button
-            className="marker-button"
-            // onClick={() => setPopupOtevren(true)}
-          >
-            <img src={spendlikUrl} width={50} height={50} />
           </button> */}
         </Marker>
         {/* {popupOtevren && (
@@ -143,6 +148,13 @@ const Map00 = (props) => {
       {/* <button onClick={() => setQuestionPop(!questionPop)}>
         {questionPop ? 'show' : 'hide'} questions
       </button> */}
+      <button
+        onClick={handleNextQuestion}
+        className={inRange ? "btn btn--on" : "btn"}
+        disabled={!inRange}
+      >
+        {message}
+      </button>
     </>
   );
 };
