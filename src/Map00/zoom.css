@@ -7,3 +7,10 @@
 .ovladani > * {
   position: static !important;
 }
+
+.map {
+  position: relative;
+}
+.btn {
+  position: absolute;
+}
