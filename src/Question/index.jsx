@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../img/logo-about.png";
 // import "./style.css";
 
-const Map01 = () => {
+const Question = () => {
   return (
     <>
       <img className="logo-about" src={logo}></img>
@@ -16,4 +16,4 @@ const Map01 = () => {
   );
 };
 
-export default Map01;
+export default Question;

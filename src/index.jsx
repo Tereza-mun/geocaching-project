@@ -8,7 +8,7 @@ import Username from "./Username";
 import Welcome from "./Welcome";
 import Essentials from "./Essentials";
 import Map00 from "./Map00";
-import Map01 from "./Map01";
+import Question from "./Question";
 import Congrat from "./Congrat";
 
 import "./style.css";
@@ -61,8 +61,8 @@ const App = () => {
           <Route exact path="/map00">
             <Map00 />
           </Route>
-          <Route exact path="/map01">
-            <Map01 />
+          <Route exact path="/question">
+            <Question />
           </Route>
           <Route exact path="/congratulation">
             <Congrat usernameW={username} />
