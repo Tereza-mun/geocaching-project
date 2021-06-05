@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../img/logo-about.png";
+// import logo from "../img/logo-about.png";
 import { pinpoints } from "../Map00/pinpoints.js";
 import "./style.css";
 
