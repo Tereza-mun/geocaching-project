@@ -106,12 +106,12 @@ const Map00 = (props) => {
           >
             {message}
           </button>
-          {/* <button
+          <button
             className="marker-button"
             // onClick={() => setPopupOtevren(true)}
           >
             <img src={spendlikUrl} width={50} height={50} />
-          </button> */}
+          </button>
         </Marker>
         {/* {popupOtevren && (
           <Popup
