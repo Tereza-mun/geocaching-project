@@ -108,7 +108,7 @@ const Map00 = (props) => {
           offsetTop={-50}
         >
           <button
-            className={inRange ? 'btn btn--enabled' : 'btn'}
+            className={inRange ? 'btn btn--on' : 'btn'}
             disabled={!inRange}
           >
             {message}
