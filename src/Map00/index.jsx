@@ -12,16 +12,47 @@ import "./marker.css";
 import "./zoom.css";
 import { pinpoints } from "./pinpoints.js";
 
-const Map00 = () => {
+const Map00 = (props) => {
+  const getDistance = (point1, point2) => {
+    const R = 6371e3; // metres
+    const φ1 = (point1.latitude * Math.PI) / 180; // φ, λ in radians
+    const φ2 = (point2.latitude * Math.PI) / 180;
+    const Δφ = ((point2.latitude - point1.latitude) * Math.PI) / 180;
+    const Δλ = ((point2.longitude - point1.longitude) * Math.PI) / 180;
+
+    const a =
+      Math.sin(Δφ / 2) * Math.sin(Δφ / 2) +
+      Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) * Math.sin(Δλ / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    const d = R * c; // in metres
+    console.log(d);
+
+    return d;
+  };
+
+  const [inRange, setInRange] = useState(false);
+
   const [viewport, setViewport] = useState({
     latitude: 50.1045369,
     longitude: 14.4310347,
-    zoom: 13,
+    zoom: 14,
   });
 
-  const [popupOtevren, setPopupOtevren] = useState(false);
+  // const [popupOtevren, setPopupOtevren] = useState(false);
 
-  const [questionPop, setQuestionPop] = useState(false);
+  // const [questionPop, setQuestionPop] = useState(false);
+
+  const handleActualLocation = (e) => {
+    const distance = getDistance(e.coords, {
+      latitude: props.currentQuestion.latitude,
+      longitude: props.currentQuestion.longitude,
+    });
+    if (distance <= 50) {
+      setInRange(true);
+    }
+  };
+
+  const message = inRange ? "Click to reveal question" : "Get closer";
 
   return (
     <>
@@ -62,9 +93,10 @@ const Map00 = () => {
             positionOptions={{ enableHighAccuracy: true }}
             trackUserLocation={true}
             showAccuracyCircle={false}
-            onGeolocate={(event) => {
-              console.log(event);
-            }}
+            onGeolocate={handleActualLocation}
+            //   (event) => {
+            //   console.log(event);
+            // }
             auto
           />
         </div>
@@ -76,13 +108,19 @@ const Map00 = () => {
           offsetTop={-50}
         >
           <button
+            className={inRange ? "btn btn--on" : "btn"}
+            disabled={!inRange}
+          >
+            {message}
+          </button>
+          {/* <button
             className="marker-button"
-            onClick={() => setPopupOtevren(true)}
+            // onClick={() => setPopupOtevren(true)}
           >
             <img src={spendlikUrl} width={50} height={50} />
-          </button>
+          </button> */}
         </Marker>
-        {popupOtevren && (
+        {/* {popupOtevren && (
           <Popup
             latitude={50.1045369}
             longitude={14.4310347}
@@ -91,8 +129,8 @@ const Map00 = () => {
           >
             START HERE
           </Popup>
-        )}
-        {pinpoints
+        )} */}
+        {/* {pinpoints
           .filter(
             (pinpoint) =>
               questionPop === false || pinpoint.ikonaUrl !== infoUrl,
@@ -107,12 +145,13 @@ const Map00 = () => {
             >
               <img src={pinpoint.ikonaUrl} width={30} height={30} alt="" />
             </Marker>
-          ))}
+          ))} */}
       </ReactMapGL>
-      <button onClick={() => setQuestionPop(!questionPop)}>
-        {questionPop ? "show" : "hide"} questions
-      </button>
+      {/* <button onClick={() => setQuestionPop(!questionPop)}>
+        {questionPop ? 'show' : 'hide'} questions
+      </button> */}
     </>
   );
 };
+
 export default Map00;
