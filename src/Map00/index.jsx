@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import 'mapbox-gl/dist/mapbox-gl.css';
+import React, { useState } from "react";
+import "mapbox-gl/dist/mapbox-gl.css";
 import ReactMapGL, {
   Marker,
   Popup,
   NavigationControl,
   GeolocateControl,
-} from 'react-map-gl';
-import spendlikUrl from '../img/spendlik.svg';
-import infoUrl from '../img/magnifier.svg';
-import './marker.css';
-import './zoom.css';
-import { pinpoints } from './pinpoints.js';
+} from "react-map-gl";
+import spendlikUrl from "../img/spendlik.svg";
+import infoUrl from "../img/magnifier.svg";
+import "./marker.css";
+import "./zoom.css";
+import { pinpoints } from "./pinpoints.js";
 
 const Map00 = (props) => {
   const getDistance = (point1, point2) => {
@@ -52,7 +52,7 @@ const Map00 = (props) => {
     }
   };
 
-  const message = inRange ? 'Click to reveal question' : 'Get closer';
+  const message = inRange ? "Click to reveal question" : "Get closer";
 
   return (
     <>
@@ -61,9 +61,9 @@ const Map00 = (props) => {
         mapStyle={{
           version: 8,
           sources: {
-            'raster-tiles': {
-              type: 'raster',
-              tiles: ['https://mapserver.mapy.cz/base-m/{z}-{x}-{y}'],
+            "raster-tiles": {
+              type: "raster",
+              tiles: ["https://mapserver.mapy.cz/base-m/{z}-{x}-{y}"],
               tileSize: 256,
               // attribution:
               //   'Mapové podklady od <a target="_top" rel="noopener" href="https://mapy.cz/">Seznam.cz</a> a <a target="_top" rel="noopener" href="http://openstreetmap.org">OpenStreetMap</a>.',
@@ -71,9 +71,9 @@ const Map00 = (props) => {
           },
           layers: [
             {
-              id: 'simple-tiles',
-              type: 'raster',
-              source: 'raster-tiles',
+              id: "simple-tiles",
+              type: "raster",
+              source: "raster-tiles",
               minzoom: 0,
               maxzoom: 20,
             },
@@ -108,7 +108,7 @@ const Map00 = (props) => {
           offsetTop={-50}
         >
           <button
-            className={inRange ? 'btn btn--on' : 'btn'}
+            className={inRange ? "btn btn--on" : "btn"}
             disabled={!inRange}
           >
             {message}
