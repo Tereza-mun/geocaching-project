@@ -1,4 +1,4 @@
-import infoUrl from "../img/magnifier.svg";
+import infoUrl from '../img/magnifier.svg';
 
 export const pinpoints = [
   {
@@ -7,7 +7,7 @@ export const pinpoints = [
     ikonaUrl: infoUrl,
     latitude: 50.1045369,
     longitude: 14.4310347,
-    questionText: "How many columns have fountain?",
+    questionText: 'How many columns have fountain?',
     questionOptions: [
       { answerText: 10, isCorrect: false },
       { answerText: 13, isCorrect: false },
@@ -22,12 +22,12 @@ export const pinpoints = [
     latitude: 50.105291,
     longitude: 14.427648,
     questionText:
-      "What is the name of the philosopher and astronaut on the plaque?",
+      'What is the name of the philosopher and astronaut on the plaque?',
     questionOptions: [
-      { answerText: "Aristoteles", isCorrect: false },
-      { answerText: "Buzz Aldrin", isCorrect: false },
-      { answerText: "Giordano Bruno", isCorrect: true },
-      { answerText: "Neil Armstrong", isCorrect: false },
+      { answerText: 'Aristoteles', isCorrect: false },
+      { answerText: 'Buzz Aldrin', isCorrect: false },
+      { answerText: 'Giordano Bruno', isCorrect: true },
+      { answerText: 'Neil Armstrong', isCorrect: false },
     ],
   },
   {
@@ -36,12 +36,12 @@ export const pinpoints = [
     ikonaUrl: infoUrl,
     latitude: 50.1070722,
     longitude: 14.4221119,
-    questionText: "What kind of animal is created on a wooden pier?",
+    questionText: 'What kind of animal is created on a wooden pier?',
     questionOptions: [
-      { answerText: "Duck", isCorrect: true },
-      { answerText: "Swan", isCorrect: false },
-      { answerText: "Frog", isCorrect: false },
-      { answerText: "Goose", isCorrect: false },
+      { answerText: 'Duck', isCorrect: true },
+      { answerText: 'Swan', isCorrect: false },
+      { answerText: 'Frog', isCorrect: false },
+      { answerText: 'Goose', isCorrect: false },
     ],
   },
   {
@@ -50,12 +50,12 @@ export const pinpoints = [
     ikonaUrl: infoUrl,
     latitude: 50.1076472,
     longitude: 14.4176525,
-    questionText: "You reached the location which is ideal for what?",
+    questionText: 'You reached the location which is ideal for what?',
     questionOptions: [
-      { answerText: "Order a coffee", isCorrect: false },
-      { answerText: "Borrow a book", isCorrect: true },
-      { answerText: "Restroom", isCorrect: false },
-      { answerText: "Rent a bike", isCorrect: false },
+      { answerText: 'Order a coffee', isCorrect: false },
+      { answerText: 'Borrow a book', isCorrect: true },
+      { answerText: 'Restroom', isCorrect: false },
+      { answerText: 'Rent a bike', isCorrect: false },
     ],
   },
   {
@@ -64,12 +64,12 @@ export const pinpoints = [
     ikonaUrl: infoUrl,
     latitude: 50.1058994,
     longitude: 14.4140292,
-    questionText: "What kind of special tree can you find in this location?",
+    questionText: 'What kind of special tree can you find in this location?',
     questionOptions: [
-      { answerText: "Chinese", isCorrect: false },
-      { answerText: "Philippines", isCorrect: false },
-      { answerText: "Australian", isCorrect: false },
-      { answerText: "Japanese", isCorrect: true },
+      { answerText: 'Chinese', isCorrect: false },
+      { answerText: 'Philippines', isCorrect: false },
+      { answerText: 'Australian', isCorrect: false },
+      { answerText: 'Japanese', isCorrect: true },
     ],
   },
   {
@@ -78,12 +78,12 @@ export const pinpoints = [
     ikonaUrl: infoUrl,
     latitude: 50.1049194,
     longitude: 14.4083556,
-    questionText: "What is written on a 3 line of plaque?",
+    questionText: 'What is written on a 3 line of plaque?',
     questionOptions: [
-      { answerText: "MDCCCIV", isCorrect: false },
-      { answerText: "MDCCCII", isCorrect: true },
-      { answerText: "MDCCCVI", isCorrect: false },
-      { answerText: "MDCCCX", isCorrect: false },
+      { answerText: 'MDCCCIV', isCorrect: false },
+      { answerText: 'MDCCCII', isCorrect: true },
+      { answerText: 'MDCCCVI', isCorrect: false },
+      { answerText: 'MDCCCX', isCorrect: false },
     ],
   },
   {
@@ -92,7 +92,7 @@ export const pinpoints = [
     ikonaUrl: infoUrl,
     latitude: 50.1044306,
     longitude: 14.4150547,
-    questionText: "What is the year on the big stone in front of you?",
+    questionText: 'What is the year on the big stone in front of you?',
     questionOptions: [
       { answerText: 1869, isCorrect: false },
       { answerText: 1888, isCorrect: false },
@@ -106,12 +106,12 @@ export const pinpoints = [
     ikonaUrl: infoUrl,
     latitude: 50.1062383,
     longitude: 14.4166774,
-    questionText: "What is the name of the pond surrounding the island?",
+    questionText: 'What is the name of the pond surrounding the island?',
     questionOptions: [
-      { answerText: "Šestáček", isCorrect: false },
-      { answerText: "Rozínek", isCorrect: false },
-      { answerText: "Srpeček", isCorrect: false },
-      { answerText: "Slunečnice", isCorrect: true },
+      { answerText: 'Šestáček', isCorrect: false },
+      { answerText: 'Rozínek', isCorrect: false },
+      { answerText: 'Srpeček', isCorrect: false },
+      { answerText: 'Slunečnice', isCorrect: true },
     ],
   },
   {
@@ -120,12 +120,12 @@ export const pinpoints = [
     ikonaUrl: infoUrl,
     latitude: 50.1048456,
     longitude: 14.417837,
-    questionText: "How many heads are surrouding the flower area?",
+    questionText: 'How many heads are surrouding the flower area?',
     questionOptions: [
       { answerText: 30, isCorrect: true },
       { answerText: 28, isCorrect: false },
       { answerText: 25, isCorrect: false },
-      { answerText: 34, isCorrect: true },
+      { answerText: 34, isCorrect: false },
     ],
   },
 ];

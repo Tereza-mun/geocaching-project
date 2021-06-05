@@ -1,20 +1,21 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { render } from "react-dom";
-import Home from "./Home";
-import About from "./About";
-import Rules from "./Rules";
-import Username from "./Username";
-import Welcome from "./Welcome";
-import Essentials from "./Essentials";
-import Map00 from "./Map00";
-import Question from "./Question";
-import Congrat from "./Congrat";
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { render } from 'react-dom';
+import Home from './Home';
+import About from './About';
+import Rules from './Rules';
+import Username from './Username';
+import Welcome from './Welcome';
+import Essentials from './Essentials';
+import Map00 from './Map00';
+import Question from './Question';
+import Congrat from './Congrat';
+import { pinpoints } from './Map00/pinpoints';
 
-import "./style.css";
+import './style.css';
 
 const App = () => {
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState('');
 
   const handleHello = (name) => {
     setUsername(name);
@@ -59,7 +60,7 @@ const App = () => {
             <Essentials />
           </Route>
           <Route exact path="/map00">
-            <Map00 />
+            <Map00 currentQuestion={pinpoints[0]} />
           </Route>
           <Route exact path="/question">
             <Question />
@@ -73,4 +74,4 @@ const App = () => {
   );
 };
 
-render(<App />, document.querySelector("#app"));
+render(<App />, document.querySelector('#app'));
