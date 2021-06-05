@@ -7,7 +7,7 @@ export const pinpoints = [
     ikonaUrl: infoUrl,
     latitude: 50.1045369,
     longitude: 14.4310347,
-    questionText: "How many columns have fountain?",
+    questionText: "How many columns does the fountain have?",
     answerOptions: [
       { answerText: 10, isCorrect: false },
       { answerText: 13, isCorrect: false },
@@ -22,7 +22,7 @@ export const pinpoints = [
     latitude: 50.105291,
     longitude: 14.427648,
     questionText:
-      "What is the name of the philosopher and astronaut on the plaque?",
+      "What is the name of the philosopher and astronomer on the plaque of the planetarium?",
     answerOptions: [
       { answerText: "Aristoteles", isCorrect: false },
       { answerText: "Buzz Aldrin", isCorrect: false },
@@ -36,7 +36,7 @@ export const pinpoints = [
     ikonaUrl: infoUrl,
     latitude: 50.1070722,
     longitude: 14.4221119,
-    questionText: "What kind of animal is created on a wooden pier?",
+    questionText: "What animal does the wooden pier represent?",
     answerOptions: [
       { answerText: "Duck", isCorrect: true },
       { answerText: "Swan", isCorrect: false },
@@ -50,7 +50,7 @@ export const pinpoints = [
     ikonaUrl: infoUrl,
     latitude: 50.1076472,
     longitude: 14.4176525,
-    questionText: "You reached the location which is ideal for what?",
+    questionText: "What is the location which you just reached used for?",
     answerOptions: [
       { answerText: "Order a coffee", isCorrect: false },
       { answerText: "Borrow a book", isCorrect: true },
@@ -64,7 +64,7 @@ export const pinpoints = [
     ikonaUrl: infoUrl,
     latitude: 50.1058994,
     longitude: 14.4140292,
-    questionText: "What kind of special tree can you find in this location?",
+    questionText: "What is the attribute of the tree closes to the fountain?",
     answerOptions: [
       { answerText: "Chinese", isCorrect: false },
       { answerText: "Philippines", isCorrect: false },
@@ -78,7 +78,7 @@ export const pinpoints = [
     ikonaUrl: infoUrl,
     latitude: 50.1049194,
     longitude: 14.4083556,
-    questionText: "What is written on a 3 line of plaque?",
+    questionText: "What is written on the 3rd line on the plaque?",
     answerOptions: [
       { answerText: "MDCCCIV", isCorrect: false },
       { answerText: "MDCCCII", isCorrect: true },
@@ -92,7 +92,7 @@ export const pinpoints = [
     ikonaUrl: infoUrl,
     latitude: 50.1044306,
     longitude: 14.4150547,
-    questionText: "What is the year on the big stone in front of you?",
+    questionText: "What year is stated on the stone monument?",
     answerOptions: [
       { answerText: 1869, isCorrect: false },
       { answerText: 1888, isCorrect: false },
@@ -120,7 +120,7 @@ export const pinpoints = [
     ikonaUrl: infoUrl,
     latitude: 50.1048456,
     longitude: 14.417837,
-    questionText: "How many heads are surrouding the flower area?",
+    questionText: "How many dragon heads are surrouding the oval flower lawn?",
     answerOptions: [
       { answerText: 30, isCorrect: true },
       { answerText: 28, isCorrect: false },
