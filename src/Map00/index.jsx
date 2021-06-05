@@ -38,8 +38,6 @@ const Map00 = (props) => {
     zoom: 14,
   });
 
-  // const [popupOtevren, setPopupOtevren] = useState(false);
-
   // const [questionPop, setQuestionPop] = useState(false);
 
   const handleActualLocation = (e) => {
@@ -65,8 +63,6 @@ const Map00 = (props) => {
               type: "raster",
               tiles: ["https://mapserver.mapy.cz/base-m/{z}-{x}-{y}"],
               tileSize: 256,
-              // attribution:
-              //   'Mapové podklady od <a target="_top" rel="noopener" href="https://mapy.cz/">Seznam.cz</a> a <a target="_top" rel="noopener" href="http://openstreetmap.org">OpenStreetMap</a>.',
             },
           },
           layers: [
@@ -94,9 +90,6 @@ const Map00 = (props) => {
             trackUserLocation={true}
             showAccuracyCircle={false}
             onGeolocate={handleActualLocation}
-            //   (event) => {
-            //   console.log(event);
-            // }
             auto
           />
         </div>
