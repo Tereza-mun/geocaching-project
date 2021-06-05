@@ -10,9 +10,7 @@ const Question = (props) => {
   const moznosti = props.currentQuestion.answerOptions;
 
   const handleQBtn = (e) => {
-    const malaka = e;
-    console.log(malaka);
-    if (malaka) {
+    if (e) {
       console.log("bomba");
       props.score();
     } else {
