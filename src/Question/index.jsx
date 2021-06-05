@@ -1,20 +1,22 @@
-import React from "react";
+import React from 'react';
+import { useHistory } from 'react-router-dom';
 // import logo from "../img/logo-about.png";
-import { pinpoints } from "../Map00/pinpoints.js";
-import "./style.css";
+
+import './style.css';
 
 const Question = (props) => {
   console.log(props.currentQuestion);
+  const history = useHistory();
 
   const otazka = props.currentQuestion.questionText;
   const moznosti = props.currentQuestion.answerOptions;
 
   const handleQBtn = (e) => {
     if (e) {
-      console.log("bomba");
+      console.log('bomba');
       props.score();
     } else {
-      console.log("fml");
+      console.log('fml');
     }
   };
 
