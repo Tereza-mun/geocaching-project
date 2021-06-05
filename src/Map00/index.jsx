@@ -6,7 +6,7 @@ import ReactMapGL, {
   NavigationControl,
   GeolocateControl,
 } from "react-map-gl";
-import spendlikUrl from "../img/spendlik.svg";
+// import spendlikUrl from "../img/spendlik.svg";
 import infoUrl from "../img/magnifier.svg";
 import "./marker.css";
 import "./zoom.css";
@@ -108,7 +108,7 @@ const Map00 = (props) => {
           offsetTop={-50}
         >
           <button className="marker-button">
-            <img src={spendlikUrl} width={50} height={50} />
+            <img src={infoUrl} width={50} height={50} />
           </button>
           {/* <button
             onClick={handleNextQuestion}
@@ -145,9 +145,7 @@ const Map00 = (props) => {
             </Marker>
           ))} */}
       </ReactMapGL>
-      {/* <button onClick={() => setQuestionPop(!questionPop)}>
-        {questionPop ? 'show' : 'hide'} questions
-      </button> */}
+
       <button
         onClick={handleNextQuestion}
         className={inRange ? "btn btn--on" : "btn"}
