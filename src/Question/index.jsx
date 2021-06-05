@@ -1,17 +1,43 @@
 import React from "react";
 import logo from "../img/logo-about.png";
-// import "./style.css";
+import { pinpoints } from "../Map00/pinpoints.js";
+import "./style.css";
 
-const Question = () => {
+const Question = (props) => {
+  console.log(props.currentQuestion);
+
+  const otazka = props.currentQuestion.questionText;
+  const moznosti = props.currentQuestion.answerOptions;
+
+  const handleQBtn = (e) => {
+    const malaka = e;
+    console.log(malaka);
+    if (malaka) {
+      console.log("bomba");
+      props.score();
+    } else {
+      console.log("fml");
+    }
+  };
+
   return (
     <>
-      <img className="logo-about" src={logo}></img>
-      <form className="question-choices">
-        <input type="radio" id="question1" name="question1" value="5" />
-        <label for="question1">5</label>
-        <input type="radio" id="question1" name="question1" value="10" />
-        <label for="question1">10</label>
-      </form>
+      <div className="bubble-up">
+        <div className="question-text">{otazka}</div>
+      </div>
+      {/* 
+      <img style={{ width: "30%" }} className="logo-about" src={logo}></img> */}
+
+      <div>
+        {moznosti.map((moznost) => (
+          <button
+            onClick={() => handleQBtn(moznost.isCorrect)}
+            key={moznost.answerText}
+          >
+            {moznost.answerText}
+          </button>
+        ))}
+      </div>
     </>
   );
 };

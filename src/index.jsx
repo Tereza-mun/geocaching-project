@@ -10,6 +10,7 @@ import Essentials from "./Essentials";
 import Map00 from "./Map00";
 import Question from "./Question";
 import Congrat from "./Congrat";
+import { pinpoints } from "./Map00/pinpoints";
 
 import "./style.css";
 
@@ -18,6 +19,17 @@ const App = () => {
 
   const handleHello = (name) => {
     setUsername(name);
+  };
+
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+
+  const currentQuestion = pinpoints[currentQuestionIndex];
+
+  const [score, setScore] = useState(0);
+
+  const handleCorrect = () => {
+    setScore(score + 1000);
+    setCurrentQuestionIndex(currentQuestionIndex + 1);
   };
 
   return (
@@ -62,7 +74,7 @@ const App = () => {
             <Map00 />
           </Route>
           <Route exact path="/question">
-            <Question />
+            <Question currentQuestion={currentQuestion} score={handleCorrect} />
           </Route>
           <Route exact path="/congratulation">
             <Congrat usernameW={username} />
