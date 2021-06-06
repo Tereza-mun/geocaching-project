@@ -18,7 +18,7 @@ import Popup from "reactjs-popup";
 import "./style.css";
 
 const App = () => {
-  const [username, setUsername] = useState("Mon");
+  const [username, setUsername] = useState("");
 
   const history = useHistory();
 
@@ -63,6 +63,8 @@ const App = () => {
               <Popup
                 modal={true}
                 trigger={<button className="btn--rules"> Rules</button>}
+                overlayStyle={{ background: "rgba(0,0,0,0.5)" }}
+                closeOnDocumentClick={true}
               >
                 {(close) => (
                   <div className="rules">
