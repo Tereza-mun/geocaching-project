@@ -44,7 +44,7 @@ const Map00 = (props) => {
 
   const getViewport = (point1, point2) => {
     return new WebMercatorViewport({
-      width: "100%",
+      width: Math.min(window.innerWidth, 480) - 60,
       height: 400,
     }).fitBounds(
       [
