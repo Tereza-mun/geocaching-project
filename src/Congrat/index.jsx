@@ -6,7 +6,6 @@ import "./style.css";
 const Congrat = ({ usernameW, scoreCounter }) => {
   return (
     <>
-      {/* musime to vycentrovat */}
       <h2 className="heading">Congratulation {usernameW}!</h2>
       <img className="logo-congrat" src={logo}></img>
 

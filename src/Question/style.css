@@ -1,7 +1,86 @@
-.bubble-up {
+/* .bubble-up {
   text-align: center;
-}
+} */
 
 .questionBtn--fail {
   background-color: rgb(255, 42, 42);
+}
+
+.logo-chat {
+  width: 25%;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.bubbleWrapper {
+  /* padding: 10px 10px; */
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-self: flex-end;
+  color: rgb(0, 0, 0);
+  width: 100%;
+}
+
+.otherBubble {
+  font-size: 1.3rem;
+  min-width: 60px;
+  max-width: 700px;
+  padding: 20px 20px;
+  /* margin: 6px 8px; */
+  background-color: #faab68;
+  border-radius: 10px 10px 10px 10px;
+  width: 100%;
+}
+
+.other {
+  align-self: flex-start;
+}
+
+.questionOptions button {
+  width: 100%;
+  margin-bottom: 15px;
+  background-color: #d1e9b6;
+  border: 0.2px dotted;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.questionOptions button {
+  position: relative;
+  background-color: #04aa6d;
+  border: none;
+  font-size: 28px;
+  color: #ffffff;
+  padding: 20px;
+  /* width: 200px; */
+  text-align: center;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.questionOptions button:after {
+  content: "";
+  background: #bb3636;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.questionOptions button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.questionBtn--fail {
+  background-color: red !important;
 }

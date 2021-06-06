@@ -18,7 +18,7 @@ import Popup from "reactjs-popup";
 import "./style.css";
 
 const App = () => {
-  const [username, setUsername] = useState("Mon");
+  const [username, setUsername] = useState("");
 
   const history = useHistory();
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-// import logo from "../img/logo-about.png";
+import logo from "../img/logo-chat.png";
 
 import "./style.css";
 
@@ -49,13 +49,13 @@ const Question = (props) => {
 
   return (
     <>
-      <div className="bubble-up">
-        <div className="question-text">{otazka}</div>
+      <div className="bubbleWrapper">
+        <div className="otherBubble other">{otazka}</div>
       </div>
-      {/* 
-      <img style={{ width: "30%" }} className="logo-about" src={logo}></img> */}
 
-      <div>
+      <img className="logo-chat" src={logo}></img>
+
+      <div className="questionOptions">
         {moznosti.map((moznost, index) => (
           <button
             className={
