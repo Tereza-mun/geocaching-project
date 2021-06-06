@@ -3,7 +3,6 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import ReactMapGL, {
   Marker,
   Popup,
-  NavigationControl,
   GeolocateControl,
   WebMercatorViewport,
 } from "react-map-gl";
@@ -117,7 +116,6 @@ const Map00 = (props) => {
         // onViewportChange={(nextViewport) => setViewport(nextViewport)}
       >
         <div className="ovladani">
-          <NavigationControl />
           <GeolocateControl
             style={{
               right: 10,

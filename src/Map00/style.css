@@ -9,18 +9,22 @@
 }
 
 .score {
-  border: 2px solid black;
-  background-color: #f3b95d;
-  font-size: 1.1rem;
+  border: 2px solid #af7f2c;
+  background-color: #f7b239;
+  border-radius: 15px;
+  font-size: 1.3rem;
   margin: 0 auto;
   margin-bottom: 10px;
   width: auto;
-  padding: 8px;
+  padding: 12px;
   text-align: center;
 }
 
 .btn {
-  background-color: #cbddad;
+  background-color: #d8d8d8cb;
+  border: 2px solid #a9a7a7cb;
+  color: rgba(0, 0, 0, 0.571);
+  border-radius: 10px;
   font-size: 1.5rem;
   position: absolute;
   bottom: 10px;
@@ -29,7 +33,10 @@
 }
 
 .btn--on {
-  background-color: rgb(105, 187, 105);
+  background-color: #098256d2;
+  border: 2px solid white;
+  color: white;
+  border-radius: 10px;
 }
 
 /* .map {
