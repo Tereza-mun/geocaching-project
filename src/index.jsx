@@ -116,7 +116,7 @@ const App = () => {
             <Question currentQuestion={currentQuestion} score={handleCorrect} />
           </Route>
           <Route exact path="/congratulation">
-            <Congrat usernameW={username} />
+            <Congrat usernameW={username} scoreCounter={score} />
           </Route>
         </Switch>
       </div>
