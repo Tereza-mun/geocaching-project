@@ -134,15 +134,15 @@ const Map00 = (props) => {
             <img src={spendlikUrl} width={50} height={50} />
           </button>
         </Marker>
-      </ReactMapGL>
 
-      <button
-        onClick={handleNextQuestion}
-        className={inRange ? "btn btn--on" : "btn"}
-        disabled={!inRange}
-      >
-        {message}
-      </button>
+        <button
+          onClick={handleNextQuestion}
+          className={inRange ? "btn btn--on" : "btn"}
+          disabled={!inRange}
+        >
+          {message}
+        </button>
+      </ReactMapGL>
     </>
   );
 };
