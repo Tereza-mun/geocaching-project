@@ -21,13 +21,6 @@ const Rules = () => {
           &#8226; After answering the question next location will be unlocked.
         </p>
       </div>
-
-      {/* WILL BE ABLE TO START GAME only if USERNAME created else will be
-      redirected to USERNAME PAGE */}
-
-      <Link style={{ textDecoration: "none" }} to="/">
-        <button>Back Home</button>
-      </Link>
     </>
   );
 };

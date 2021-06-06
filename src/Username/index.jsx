@@ -19,11 +19,7 @@ const Username = (props) => {
       <h2 className="heading">GEOCACHING</h2>
       <h3 className="subheading">in Stromovka</h3>
       <img className="logo-username" src={logo}></img>
-      <p className="paragraph-home">
-        Welcome to the ultimate geocaching game. Please read the rules carefully
-        first, get your mobile phone and knowledge ready and let’s get this
-        adventure started!
-      </p>
+
       <form className="username-form">
         <input
           value={values}
@@ -33,7 +29,7 @@ const Username = (props) => {
         />
 
         <p className="paragraph-username">
-          Choose a username to start your journey
+          Create a username to start your journey
         </p>
         <Link style={{ textDecoration: "none" }} to="/welcome">
           {values.length < 2 ? (

@@ -7,12 +7,10 @@ import {
   useHistory,
 } from "react-router-dom";
 import { render } from "react-dom";
-// import Home from "./Home";
 import About from "./About";
 import Rules from "./Rules";
 import Username from "./Username";
 import Welcome from "./Welcome";
-import Essentials from "./Essentials";
 import Map00 from "./Map00";
 import Question from "./Question";
 import Congrat from "./Congrat";
@@ -22,6 +20,7 @@ import "./style.css";
 
 const App = () => {
   const [username, setUsername] = useState("");
+
   const history = useHistory();
 
   const handleHello = (name) => {
@@ -29,9 +28,7 @@ const App = () => {
   };
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-
   const currentQuestion = pinpoints[currentQuestionIndex];
-
   const [score, setScore] = useState(0);
 
   const handleCorrect = () => {
@@ -60,9 +57,6 @@ const App = () => {
         </nav>
 
         <Switch>
-          {/* <Route exact path="/">
-            <Home />
-          </Route> */}
           <Route exact path="/about">
             <About />
           </Route>
@@ -74,9 +68,6 @@ const App = () => {
           </Route>
           <Route exact path="/welcome">
             <Welcome usernameW={username} />
-          </Route>
-          <Route exact path="/essentials">
-            <Essentials />
           </Route>
           <Route exact path="/map00">
             <Map00 currentQuestion={currentQuestion} />

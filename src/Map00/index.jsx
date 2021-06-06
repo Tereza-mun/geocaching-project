@@ -6,8 +6,8 @@ import ReactMapGL, {
   NavigationControl,
   GeolocateControl,
 } from "react-map-gl";
-// import spendlikUrl from "../img/spendlik.svg";
-import infoUrl from "../img/magnifier.svg";
+import spendlikUrl from "../img/spendlik.svg";
+// import infoUrl from "../img/magnifier.svg";
 import "./marker.css";
 import "./zoom.css";
 import { pinpoints } from "./pinpoints.js";
@@ -108,42 +108,9 @@ const Map00 = (props) => {
           offsetTop={-50}
         >
           <button className="marker-button">
-            <img src={infoUrl} width={50} height={50} />
+            <img src={spendlikUrl} width={50} height={50} />
           </button>
-          {/* <button
-            onClick={handleNextQuestion}
-            className={inRange ? "btn btn--on" : "btn"}
-            disabled={!inRange}
-          >
-            {message}
-          </button> */}
         </Marker>
-        {/* {popupOtevren && (
-          <Popup
-            latitude={50.1045369}
-            longitude={14.4310347}
-            offsetTop={-35}
-            onClose={() => setPopupOtevren(false)}
-          >
-            START HERE
-          </Popup>
-        )} */}
-        {/* {pinpoints
-          .filter(
-            (pinpoint) =>
-              questionPop === false || pinpoint.ikonaUrl !== infoUrl,
-          )
-          .map((pinpoint) => (
-            <Marker
-              key={pinpoint.id}
-              latitude={pinpoint.latitude}
-              longitude={pinpoint.longitude}
-              offsetLeft={-15}
-              offsetTop={-15}
-            >
-              <img src={pinpoint.ikonaUrl} width={30} height={30} alt="" />
-            </Marker>
-          ))} */}
       </ReactMapGL>
 
       <button

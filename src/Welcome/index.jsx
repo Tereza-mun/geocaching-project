@@ -11,7 +11,10 @@ const Welcome = ({ usernameW }) => {
       <div className="paragraph-welcome">
         <h3 className="subheading-welcome">Hello {usernameW},</h3>
         <p>Discover Stromovka park through our Geocache quizzes.</p>
-        <p>Stay active, stay happy and test your knowledge.</p>
+        <p>
+          Please read the rules first and make sure to allow access to your GPS
+          location.
+        </p>
       </div>
       <Link style={{ textDecoration: "none" }} to="/map00">
         <button>Start Game</button>
