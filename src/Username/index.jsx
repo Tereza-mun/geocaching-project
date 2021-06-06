@@ -25,6 +25,7 @@ const Username = (props) => {
       </p>
       <form className="username-form">
         <input
+          className="username-input"
           value={values}
           onChange={handleUsernameInput}
           type="text"

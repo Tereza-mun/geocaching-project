@@ -32,6 +32,12 @@ const App = () => {
 
   const handleCorrect = (pointsAdded) => {
     setScore(score + pointsAdded);
+
+    if (currentQuestionIndex + 1 >= pinpoints.length) {
+      history.push("/congratulation");
+      return;
+    }
+
     setCurrentQuestionIndex(currentQuestionIndex + 1);
     history.push("/map00");
   };

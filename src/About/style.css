@@ -18,19 +18,19 @@
 }
 /* Pridano end */
 
+.logo-about {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
 .paragraph-about {
   /* zmenen z center */
   text-align: center;
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-family: "PT Sans Narrow";
-}
-
-.logo-about {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
 }

@@ -10,7 +10,7 @@ import ReactMapGL, {
 import spendlikUrl from "../img/spendlik.svg";
 // import infoUrl from "../img/magnifier.svg";
 import "./marker.css";
-import "./zoom.css";
+import "./style.css";
 import { pinpoints } from "./pinpoints.js";
 import { useHistory } from "react-router-dom";
 
@@ -81,6 +81,9 @@ const Map00 = (props) => {
 
   return (
     <>
+      <div className="score">
+        {props.usernameW}: {props.scoreCounter} points
+      </div>
       <ReactMapGL
         {...viewport}
         mapStyle={{
@@ -140,10 +143,6 @@ const Map00 = (props) => {
       >
         {message}
       </button>
-
-      <div className="score">
-        {props.usernameW}: {props.scoreCounter} points
-      </div>
     </>
   );
 };

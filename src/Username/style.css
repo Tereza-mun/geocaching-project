@@ -1,43 +1,43 @@
+.logo-username {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 63%;
+}
+
+/* text pod img */
+.paragraph-home {
+  text-align: center;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.3rem;
+  font-family: "PT Sans Narrow";
+}
+
 .username-form {
-  padding-top: 2.4rem;
+  /* padding-top: 0.5rem; */
   text-align: center;
 }
 
-input {
+.username-input {
   font-family: "PT Sans Narrow";
   font-size: 1.2rem;
-  width: 55%;
+  width: 70%;
   background-color: #fcfcfc;
   border: 0;
   border-bottom: 2px solid black;
   padding: 7px;
 }
 
+/* Create a username to start your journey */
 .paragraph-username {
   text-align: center;
   max-width: 90%;
   margin-top: 1px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
   font-size: 0.7rem;
-  font-family: "PT Sans Narrow";
-}
-
-.logo-username {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-.paragraph-home {
-  /* zmenen z center */
-  text-align: center;
-  max-width: 90%;
-  margin-top: 5px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1.6rem;
   font-family: "PT Sans Narrow";
 }
