@@ -7,7 +7,7 @@ import {
   useHistory,
 } from "react-router-dom";
 import { render } from "react-dom";
-import Home from "./Home";
+// import Home from "./Home";
 import About from "./About";
 import Rules from "./Rules";
 import Username from "./Username";
@@ -60,16 +60,16 @@ const App = () => {
         </nav>
 
         <Switch>
-          <Route exact path="/">
+          {/* <Route exact path="/">
             <Home />
-          </Route>
+          </Route> */}
           <Route exact path="/about">
             <About />
           </Route>
           <Route exact path="/rules">
             <Rules />
           </Route>
-          <Route exact path="/username">
+          <Route exact path="/">
             <Username helloUsername={handleHello} />
           </Route>
           <Route exact path="/welcome">
