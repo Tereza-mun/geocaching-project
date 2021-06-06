@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // import logo from "../img/logo-about.png";
 
@@ -10,13 +10,41 @@ const Question = (props) => {
   const otazka = props.currentQuestion.questionText;
   const moznosti = props.currentQuestion.answerOptions;
 
-  const handleQBtn = (e) => {
-    if (e) {
+  const [failTry, setFailTry] = useState(0);
+
+  const [clickedAnswers, setClickedAnswers] = useState([
+    false,
+    false,
+    false,
+    false,
+  ]);
+
+  const addPoints = () => {
+    if (failTry === 0) {
+      props.score(1000);
+    } else if (failTry === 1) {
+      props.score(750);
+    } else if (failTry === 2) {
+      props.score(500);
+    } else {
+      props.score(250);
+    }
+  };
+
+  const handleQBtn = (isCorrect, index) => {
+    if (isCorrect) {
       console.log("bomba");
-      props.score();
+      addPoints();
     } else {
       console.log("fml");
+      setFailTry(failTry + 1);
     }
+
+    const newClickedAnswers = [...clickedAnswers];
+    newClickedAnswers[index] = true;
+
+    setClickedAnswers(newClickedAnswers);
+    console.log(clickedAnswers);
   };
 
   return (
@@ -28,9 +56,14 @@ const Question = (props) => {
       <img style={{ width: "30%" }} className="logo-about" src={logo}></img> */}
 
       <div>
-        {moznosti.map((moznost) => (
+        {moznosti.map((moznost, index) => (
           <button
-            onClick={() => handleQBtn(moznost.isCorrect)}
+            className={
+              clickedAnswers[index] === true
+                ? "questionBtn--fail"
+                : "questionBtn"
+            }
+            onClick={() => handleQBtn(moznost.isCorrect, index)}
             key={moznost.answerText}
           >
             {moznost.answerText}

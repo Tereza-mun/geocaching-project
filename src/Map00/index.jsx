@@ -122,7 +122,7 @@ const Map00 = (props) => {
       </button>
 
       <div className="score">
-        {props.usernameW}: {props.score} points
+        {props.usernameW}: {props.scoreCounter} points
       </div>
     </>
   );
