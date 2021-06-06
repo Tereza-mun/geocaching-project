@@ -1,15 +1,11 @@
-/* .bubble-up {
-  text-align: center;
-} */
-
 .questionBtn--fail {
   background-color: rgb(255, 42, 42);
 }
 
 .logo-chat {
   width: 25%;
-  margin-bottom: 50px;
   margin-top: 20px;
+  margin-bottom: 35px;
 }
 
 .bubbleWrapper {
@@ -26,9 +22,8 @@
   font-size: 1.3rem;
   min-width: 60px;
   max-width: 700px;
-  padding: 20px 20px;
-  /* margin: 6px 8px; */
-  background-color: #faab68;
+  padding: 22px 22px;
+  background-color: #eb9c48;
   border-radius: 10px 10px 10px 10px;
   width: 100%;
 }
@@ -47,7 +42,7 @@
 
 .questionOptions button {
   position: relative;
-  background-color: #04aa6d;
+  background-color: #098256d2;
   border: none;
   font-size: 28px;
   color: #ffffff;
@@ -63,7 +58,7 @@
 
 .questionOptions button:after {
   content: "";
-  background: #bb3636;
+  background: #d51a1a;
   display: block;
   position: absolute;
   padding-top: 300%;
@@ -82,5 +77,5 @@
 }
 
 .questionBtn--fail {
-  background-color: red !important;
+  background-color: rgb(145, 39, 39) !important;
 }
