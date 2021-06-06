@@ -34,6 +34,10 @@ const App = () => {
     setScore(score + pointsAdded);
     setCurrentQuestionIndex(currentQuestionIndex + 1);
     history.push("/map00");
+    if (currentQuestionIndex >= pinpoints.length) {
+      history.push("/congratulations");
+      return;
+    }
   };
 
   return (
