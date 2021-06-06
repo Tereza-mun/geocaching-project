@@ -8,9 +8,16 @@
   position: static !important;
 }
 
-.map {
+.score {
+  border: 1px solid black;
+  width: 50%;
+  margin: 10px auto 0px;
+  padding: 10px;
+}
+
+/* .map {
   position: relative;
 }
 .btn {
   position: absolute;
-}
+} */

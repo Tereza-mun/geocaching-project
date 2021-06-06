@@ -13,8 +13,8 @@ const Welcome = ({ usernameW }) => {
         <p>Discover Stromovka park through our Geocache quizzes.</p>
         <p>Stay active, stay happy and test your knowledge.</p>
       </div>
-      <Link style={{ textDecoration: "none" }} to="/essentials">
-        <button>Next</button>
+      <Link style={{ textDecoration: "none" }} to="/map00">
+        <button>Start Game</button>
       </Link>
     </>
   );

@@ -153,6 +153,10 @@ const Map00 = (props) => {
       >
         {message}
       </button>
+
+      <div className="score">
+        {props.usernameW}: {props.score} points
+      </div>
     </>
   );
 };
