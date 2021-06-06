@@ -19,7 +19,10 @@ const Username = (props) => {
       <h2 className="heading">GEOCACHING</h2>
       <h3 className="subheading">in Stromovka</h3>
       <img className="logo-username" src={logo}></img>
-
+      <p className="paragraph-home">
+        Discover Stromovka park through our Geocache quizzes. Please read the
+        rules first and make sure to allow access to your GPS location.
+      </p>
       <form className="username-form">
         <input
           value={values}
@@ -31,7 +34,7 @@ const Username = (props) => {
         <p className="paragraph-username">
           Create a username to start your journey
         </p>
-        <Link style={{ textDecoration: "none" }} to="/welcome">
+        <Link style={{ textDecoration: "none" }} to="/map00">
           {values.length < 2 ? (
             <button
               onClick={handleUsernameSubmit}
@@ -40,10 +43,10 @@ const Username = (props) => {
                 border: "solid grey",
               }}
             >
-              Submit
+              Start Game
             </button>
           ) : (
-            <button onClick={handleUsernameSubmit}>Submit</button>
+            <button onClick={handleUsernameSubmit}>Start Game</button>
           )}
         </Link>
       </form>

@@ -10,7 +10,6 @@ import { render } from "react-dom";
 import About from "./About";
 import Rules from "./Rules";
 import Username from "./Username";
-import Welcome from "./Welcome";
 import Map00 from "./Map00";
 import Question from "./Question";
 import Congrat from "./Congrat";
@@ -19,7 +18,7 @@ import Popup from "reactjs-popup";
 import "./style.css";
 
 const App = () => {
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState("Mon");
 
   const history = useHistory();
 
@@ -31,8 +30,8 @@ const App = () => {
   const currentQuestion = pinpoints[currentQuestionIndex];
   const [score, setScore] = useState(0);
 
-  const handleCorrect = () => {
-    setScore(score + 1000);
+  const handleCorrect = (pointsAdded) => {
+    setScore(score + pointsAdded);
     setCurrentQuestionIndex(currentQuestionIndex + 1);
     history.push("/map00");
   };
@@ -96,11 +95,12 @@ const App = () => {
           <Route exact path="/">
             <Username helloUsername={handleHello} />
           </Route>
-          <Route exact path="/welcome">
-            <Welcome usernameW={username} />
-          </Route>
           <Route exact path="/map00">
-            <Map00 currentQuestion={currentQuestion} />
+            <Map00
+              currentQuestion={currentQuestion}
+              usernameW={username}
+              scoreCounter={score}
+            />
           </Route>
           <Route exact path="/question">
             <Question currentQuestion={currentQuestion} score={handleCorrect} />

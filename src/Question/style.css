@@ -1,3 +1,7 @@
 .bubble-up {
   text-align: center;
 }
+
+.questionBtn--fail {
+  background-color: rgb(255, 42, 42);
+}
