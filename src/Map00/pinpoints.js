@@ -100,20 +100,20 @@ export const pinpoints = [
   //     { answerText: 1851, isCorrect: false },
   //   ],
   // },
-  // {
-  //   // OSTROVCEK - JEZERO SLUNECNICE
-  //   id: 7,
-  //   ikonaUrl: infoUrl,
-  //   latitude: 50.1062383,
-  //   longitude: 14.4166774,
-  //   questionText: "What is the name of the pond surrounding the island?",
-  //   answerOptions: [
-  //     { answerText: "Šestáček", isCorrect: false },
-  //     { answerText: "Rozínek", isCorrect: false },
-  //     { answerText: "Srpeček", isCorrect: false },
-  //     { answerText: "Slunečnice", isCorrect: true },
-  //   ],
-  // },
+  {
+    // OSTROVCEK - JEZERO SLUNECNICE
+    id: 7,
+    ikonaUrl: infoUrl,
+    latitude: 50.1062383,
+    longitude: 14.4166774,
+    questionText: "What is the name of the pond surrounding the island?",
+    answerOptions: [
+      { answerText: "Šestáček", isCorrect: false },
+      { answerText: "Rozínek", isCorrect: false },
+      { answerText: "Srpeček", isCorrect: false },
+      { answerText: "Slunečnice", isCorrect: true },
+    ],
+  },
   {
     // SLECHTOVA RESTAURACE - 30 HLAV
     id: 8,
