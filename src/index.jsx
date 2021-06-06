@@ -15,7 +15,7 @@ import Map00 from "./Map00";
 import Question from "./Question";
 import Congrat from "./Congrat";
 import { pinpoints } from "./Map00/pinpoints";
-
+import Popup from "reactjs-popup";
 import "./style.css";
 
 const App = () => {
@@ -51,7 +51,37 @@ const App = () => {
             </li>
 
             <li>
-              <Link to="/rules">Rules</Link>
+              <Popup
+                modal={true}
+                trigger={<button className="btn--rules"> Rules</button>}
+              >
+                {(close) => (
+                  <div className="rules">
+                    <p> &#8226; Starting position: 50.1047600N, 14.4313575E</p>
+                    <p>
+                      &#8226; There are 8 checkpoints, questions are related to
+                      the location you are at.
+                    </p>
+                    <p>
+                      &#8226; Once you get to the location, your GPS will
+                      validate it and the question will be revealed.
+                    </p>
+
+                    <p>
+                      &#8226; After answering the question next location will be
+                      unlocked.
+                    </p>
+                    <button
+                      className="btn--close"
+                      onClick={() => {
+                        close();
+                      }}
+                    >
+                      x
+                    </button>
+                  </div>
+                )}
+              </Popup>
             </li>
           </ul>
         </nav>
@@ -60,9 +90,9 @@ const App = () => {
           <Route exact path="/about">
             <About />
           </Route>
-          <Route exact path="/rules">
+          {/* <Route exact path="/rules">
             <Rules />
-          </Route>
+          </Route> */}
           <Route exact path="/">
             <Username helloUsername={handleHello} />
           </Route>
