@@ -5,6 +5,7 @@ import ReactMapGL, {
   Popup,
   NavigationControl,
   GeolocateControl,
+  WebMercatorViewport,
 } from "react-map-gl";
 import spendlikUrl from "../img/spendlik.svg";
 // import infoUrl from "../img/magnifier.svg";
@@ -41,7 +42,21 @@ const Map00 = (props) => {
     zoom: 14,
   });
 
-  // const [questionPop, setQuestionPop] = useState(false);
+  const getViewport = (point1, point2) => {
+    return new WebMercatorViewport({
+      width: "100%",
+      height: 400,
+    }).fitBounds(
+      [
+        [point1.longitude, point1.latitude],
+        [point2.longitude, point2.latitude],
+      ],
+      {
+        padding: 30,
+        offset: [0, -100],
+      },
+    );
+  };
 
   const handleActualLocation = (e) => {
     const distance = getDistance(e.coords, {
@@ -51,6 +66,11 @@ const Map00 = (props) => {
     if (distance <= 50) {
       setInRange(true);
     }
+    const currentViewport = getViewport(e.coords, {
+      latitude: props.currentQuestion.latitude,
+      longitude: props.currentQuestion.longitude,
+    });
+    setViewport(currentViewport);
   };
 
   const handleNextQuestion = () => {
@@ -84,7 +104,7 @@ const Map00 = (props) => {
         }}
         width="100%"
         height={400}
-        onViewportChange={(nextViewport) => setViewport(nextViewport)}
+        // onViewportChange={(nextViewport) => setViewport(nextViewport)}
       >
         <div className="ovladani">
           <NavigationControl />
