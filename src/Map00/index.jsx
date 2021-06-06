@@ -52,25 +52,32 @@ const Map00 = (props) => {
         [point2.longitude, point2.latitude],
       ],
       {
-        padding: 30,
+        padding: 50,
         offset: [0, -100],
       },
     );
   };
 
   const handleActualLocation = (e) => {
-    const distance = getDistance(e.coords, {
+    const userLocation = e.coords;
+    const questionLocation = {
       latitude: props.currentQuestion.latitude,
       longitude: props.currentQuestion.longitude,
-    });
+    };
+
+    const distance = getDistance(userLocation, questionLocation);
     if (distance <= 50) {
       setInRange(true);
     }
-    const currentViewport = getViewport(e.coords, {
-      latitude: props.currentQuestion.latitude,
-      longitude: props.currentQuestion.longitude,
-    });
-    setViewport(currentViewport);
+
+    const nextViewport = getViewport(userLocation, questionLocation);
+
+    const finalViewport = {
+      ...nextViewport,
+      zoom: Math.min(nextViewport.zoom, 16),
+    };
+    console.log(finalViewport);
+    setViewport(finalViewport);
   };
 
   const handleNextQuestion = () => {

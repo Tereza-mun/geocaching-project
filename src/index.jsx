@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -40,10 +40,12 @@ const App = () => {
 
     setCurrentQuestionIndex(currentQuestionIndex + 1);
     history.push("/map00");
-    if (currentQuestionIndex >= pinpoints.length) {
-      history.push("/congratulations");
-      return;
-    }
+  };
+
+  const handleExit = () => {
+    console.log("Works fine");
+    setScore(0);
+    setCurrentQuestionIndex(0);
   };
 
   return (
@@ -118,7 +120,11 @@ const App = () => {
             <Question currentQuestion={currentQuestion} score={handleCorrect} />
           </Route>
           <Route exact path="/congratulation">
-            <Congrat usernameW={username} scoreCounter={score} />
+            <Congrat
+              onLeave={handleExit}
+              usernameW={username}
+              scoreCounter={score}
+            />
           </Route>
         </Switch>
       </div>
