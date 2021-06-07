@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
 import ReactMapGL, {
   Marker,
@@ -12,6 +12,7 @@ import "./marker.css";
 import "./style.css";
 import { pinpoints } from "./pinpoints.js";
 import { useHistory } from "react-router-dom";
+import { useStopwatch } from "react-timer-hook";
 
 const Map00 = (props) => {
   const getDistance = (point1, point2) => {
@@ -57,7 +58,7 @@ const Map00 = (props) => {
     );
   };
 
-  const handleActualLocation = (e) => {
+  const handleCurrentLocation = (e) => {
     const userLocation = e.coords;
     const questionLocation = {
       latitude: props.currentQuestion.latitude,
@@ -80,6 +81,7 @@ const Map00 = (props) => {
   };
 
   const handleNextQuestion = () => {
+    props.start();
     history.push("/question");
   };
 
@@ -124,7 +126,7 @@ const Map00 = (props) => {
             positionOptions={{ enableHighAccuracy: true }}
             trackUserLocation={true}
             showAccuracyCircle={false}
-            onGeolocate={handleActualLocation}
+            onGeolocate={handleCurrentLocation}
             auto
           />
         </div>
@@ -148,6 +150,13 @@ const Map00 = (props) => {
           {message}
         </button>
       </ReactMapGL>
+
+      <div className="timer">
+        <p>
+          Time elapsed: <span>{props.hours}</span>:<span>{props.minutes}</span>:
+          <span>{props.seconds}</span>
+        </p>
+      </div>
     </>
   );
 };

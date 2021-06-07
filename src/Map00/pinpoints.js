@@ -7,7 +7,7 @@ export const pinpoints = [
     ikonaUrl: infoUrl,
     latitude: 50.1045369,
     longitude: 14.4310347,
-    questionText: "How many columns does the fountain have?",
+    questionText: "How many columns does the left fountain have?",
     answerOptions: [
       { answerText: 10, isCorrect: false },
       { answerText: 13, isCorrect: false },

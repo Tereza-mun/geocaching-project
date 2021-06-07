@@ -7,6 +7,7 @@ const Username = (props) => {
   const [values, setValues] = useState("");
 
   const handleUsernameSubmit = () => {
+    props.enable();
     props.helloUsername(values);
   };
 
