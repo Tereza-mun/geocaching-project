@@ -8,17 +8,16 @@
   margin-bottom: 35px;
 }
 
-.bubbleWrapper {
-  /* padding: 10px 10px; */
+/* .bubbleWrapper {
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
   align-self: flex-end;
   color: rgb(0, 0, 0);
   width: 100%;
-}
+} */
 
-.otherBubble {
+/* .otherBubble {
   font-size: 1.3rem;
   min-width: 60px;
   max-width: 700px;
@@ -30,7 +29,7 @@
 
 .other {
   align-self: flex-start;
-}
+} */
 
 .questionOptions button {
   width: 100%;
@@ -78,4 +77,27 @@
 
 .questionBtn--fail {
   background-color: rgb(145, 39, 39) !important;
+}
+
+.bubbleWrapper {
+  position: relative;
+  background: #eb9c48;
+  border-radius: 0.4em;
+  font-size: 1.3rem;
+  padding: 22px 22px;
+}
+
+.bubbleWrapper:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 38px solid transparent;
+  border-top-color: #eb9c48;
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -19px;
+  margin-bottom: -33px;
 }
