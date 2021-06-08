@@ -21,6 +21,7 @@
 .rules {
   /* zmenen z center */
   text-align: center;
+  width: 290px;
   max-width: 70%;
   margin-left: auto;
   margin-right: auto;

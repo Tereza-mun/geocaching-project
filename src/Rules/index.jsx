@@ -9,33 +9,24 @@ const Rules = () => {
     <>
       <Popup trigger={<button> Rules</button>} position="center">
         <div className="rules">
-          <p> &#8226; Starting position: 50.1047600N, 14.4313575E</p>
           <p>
-            &#8226; There are 8 checkpoints, questions are related to the
-            location you are at.
+            &#8226; There are 8 checkpoints, each holding a question, which can
+            be revealed when in radius of 50 meters.
           </p>
           <p>
-            &#8226; Once you get to the location, your GPS will validate it and
-            the question will be revealed.
+            &#8226; Answering correctly on first try will bring you 1000 points,
+            on second try 750 points, third is worth 500 points and fourth 250
+            points.
           </p>
-
           <p>
-            &#8226; After answering the question next location will be unlocked.
+            &#8226; Next location is revelead after answering the current
+            question.
+          </p>
+          <p>
+            &#8226; The goal is to earn max possible points and to have fun!
           </p>
         </div>
       </Popup>
-
-      {/* <Popup>
-        onClick=
-        {() => {
-          console.log("modal closed ");
-          close();
-        }}
-      </Popup> */}
-
-      {/* <Link style={{ textDecoration: "none" }} to="/">
-        <button>Back Home</button>
-      </Link> */}
     </>
   );
 };

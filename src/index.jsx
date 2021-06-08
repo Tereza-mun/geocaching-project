@@ -50,7 +50,7 @@ const App = () => {
   };
 
   const handleExit = () => {
-    console.log("Works fine");
+    console.log("Exit works");
     setScore(0);
     setCurrentQuestionIndex(0);
   };
@@ -80,20 +80,23 @@ const App = () => {
                     <div className="rules">
                       <p>
                         {" "}
-                        &#8226; Starting position: 50.1047600N, 14.4313575E
+                        &#8226; There are 8 checkpoints, each holding a
+                        question, which can be revealed when you get close to
+                        them.
                       </p>
                       <p>
-                        &#8226; There are 8 checkpoints, questions are related
-                        to the location you are at.
+                        &#8226; Answering correctly on first try will bring you
+                        1000 points, on second try 750 points, third is worth
+                        500 points and fourth 250 points.
                       </p>
                       <p>
-                        &#8226; Once you get to the location, your GPS will
-                        validate it and the question will be revealed.
+                        &#8226; Next location is revelead after answering the
+                        current question.
                       </p>
 
                       <p>
-                        &#8226; After answering the question next location will
-                        be unlocked.
+                        &#8226; The goal is to earn max possible points and to
+                        have fun!
                       </p>
                       <button
                         className="btn--close"
@@ -133,9 +136,9 @@ const App = () => {
               <Question
                 currentQuestion={currentQuestion}
                 score={handleCorrect}
-                hours={hours}
-                minutes={minutes}
-                seconds={seconds}
+                hours={String(hours).padStart(2, "0")}
+                minutes={String(minutes).padStart(2, "0")}
+                seconds={String(seconds).padStart(2, "0")}
                 start={start}
                 stop={pause}
               />
@@ -145,9 +148,9 @@ const App = () => {
                 onLeave={handleExit}
                 usernameW={username}
                 scoreCounter={score}
-                hours={hours}
-                minutes={minutes}
-                seconds={seconds}
+                hours={String(hours).padStart(2, "0")}
+                minutes={String(minutes).padStart(2, "0")}
+                seconds={String(seconds).padStart(2, "0")}
               />
             </Route>
           </Switch>
