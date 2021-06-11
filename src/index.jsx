@@ -40,13 +40,17 @@ const App = () => {
   const [isActive, setIsActive] = useLocalStorage("active", false);
 
   const start = () => {
-    setIsActive(!isActive);
+    setIsActive(true);
   };
 
   const reset = () => {
     setSeconds(0);
     setMinutes(0);
     setHours(0);
+    setIsActive(false);
+  };
+
+  const stop = () => {
     setIsActive(false);
   };
 
@@ -83,7 +87,7 @@ const App = () => {
     setScore(score + pointsAdded);
 
     if (currentQuestionIndex + 1 >= pinpoints.length) {
-      // pause();
+      stop();
       history.push("/congratulation");
       return;
     }
