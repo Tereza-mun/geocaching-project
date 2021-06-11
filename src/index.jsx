@@ -37,6 +37,7 @@ const App = () => {
       console.log(picture);
       const img = new Image();
       img.src = picture;
+      window[picture] = img;
     });
   }, []);
 
