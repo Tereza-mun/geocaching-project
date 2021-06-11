@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "../img/logo-chat.png";
 import "./style.css";
 
-const Question = ({ currentQuestion, score, isOpen }) => {
+const Question = ({ currentQuestion, score, isOpen, setInRange }) => {
   console.log(currentQuestion);
 
   const question = currentQuestion.questionText;

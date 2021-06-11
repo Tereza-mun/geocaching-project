@@ -15,12 +15,12 @@ import Question from "./Question";
 import Congrat from "./Congrat";
 import { pinpoints } from "./Map00/pinpoints";
 import Popup from "reactjs-popup";
-import { useStopwatch } from "react-timer-hook";
 import ReactNoSleep from "react-no-sleep";
 import "./style.css";
 import { useLocalStorage } from "./LocalStorage";
 import imageAbout from "./img/logo-about.png";
 import imageHome from "./img/logo-home.png";
+import imageTrophy from "./img/trophy.png";
 
 const App = () => {
   const [username, setUsername] = useLocalStorage("name", "");
@@ -32,7 +32,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    const pictures = [imageAbout, imageHome];
+    const pictures = [imageAbout, imageHome, imageTrophy];
     pictures.forEach((picture) => {
       console.log(picture);
       const img = new Image();
@@ -110,7 +110,6 @@ const App = () => {
     setScore(0);
     setCurrentQuestionIndex(0);
     reset();
-    // pause();
   };
 
   return (
@@ -143,7 +142,7 @@ const App = () => {
                         them.
                       </p>
                       <p>
-                        &#8226; Answering correctly on first try will bring you
+                        &#8226; Answering correctly on first try will earn you
                         1000 points, on second try 750 points, third is worth
                         500 points and fourth 250 points.
                       </p>

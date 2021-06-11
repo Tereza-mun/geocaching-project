@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
 import ReactMapGL, {
   Marker,
@@ -54,6 +54,8 @@ const Map00 = ({
 
   const [isOpen, setIsOpen] = useState(false);
 
+  const [userLocation, setUserLocation] = useState();
+
   const getViewport = (point1, point2) => {
     return new WebMercatorViewport({
       width: Math.min(window.innerWidth, 480) - 60,
@@ -71,18 +73,20 @@ const Map00 = ({
   };
 
   const handleCurrentLocation = (e) => {
-    const userLocation = e.coords;
+    const userCurrentLocation = e.coords;
+    setUserLocation(e);
+
     const questionLocation = {
       latitude: currentQuestion.latitude,
       longitude: currentQuestion.longitude,
     };
 
-    const distance = getDistance(userLocation, questionLocation);
+    const distance = getDistance(userCurrentLocation, questionLocation);
     if (distance <= 50) {
       setInRange(true);
     }
 
-    const nextViewport = getViewport(userLocation, questionLocation);
+    const nextViewport = getViewport(userCurrentLocation, questionLocation);
 
     const finalViewport = {
       ...nextViewport,
@@ -91,6 +95,12 @@ const Map00 = ({
     console.log(finalViewport);
     setViewport(finalViewport);
   };
+
+  useEffect(() => {
+    if (userLocation) {
+      handleCurrentLocation(userLocation);
+    }
+  }, [currentQuestion.longitude]);
 
   const handleNextQuestion = () => {
     setIsOpen(true);
@@ -175,6 +185,7 @@ const Map00 = ({
             currentQuestion={currentQuestion}
             score={score}
             isOpen={setIsOpen}
+            setInRange={setInRange}
           />
         </Popup>
       </ReactMapGL>
