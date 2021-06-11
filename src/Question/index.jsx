@@ -5,8 +5,8 @@ import "./style.css";
 const Question = ({ currentQuestion, score, isOpen }) => {
   console.log(currentQuestion);
 
-  const otazka = currentQuestion.questionText;
-  const moznosti = currentQuestion.answerOptions;
+  const question = currentQuestion.questionText;
+  const options = currentQuestion.answerOptions;
 
   const [failTry, setFailTry] = useState(0);
 
@@ -36,12 +36,13 @@ const Question = ({ currentQuestion, score, isOpen }) => {
     setClickedAnswers(newClickedAnswers);
     console.log(clickedAnswers);
     if (isCorrect) {
-      console.log("bomba");
+      console.log("correct");
       isOpen(false);
       addPoints();
       setClickedAnswers([false, false, false, false]);
+      setInRange(false);
     } else {
-      console.log("fml");
+      console.log("wrong");
       setFailTry(failTry + 1);
     }
   };
@@ -49,23 +50,23 @@ const Question = ({ currentQuestion, score, isOpen }) => {
   return (
     <div className="question">
       <div className="bubbleWrapper">
-        <div className="otherBubble other">{otazka}</div>
+        <div className="otherBubble other">{question}</div>
       </div>
 
       <img className="logo-chat" src={logo}></img>
 
       <div className="questionOptions">
-        {moznosti.map((moznost, index) => (
+        {options.map((option, index) => (
           <button
             className={
               clickedAnswers[index] === true
                 ? "questionBtn--fail"
                 : "questionBtn"
             }
-            onClick={() => handleQBtn(moznost.isCorrect, index)}
-            key={moznost.answerText}
+            onClick={() => handleQBtn(option.isCorrect, index)}
+            key={option.answerText}
           >
-            {moznost.answerText}
+            {option.answerText}
           </button>
         ))}
       </div>

@@ -19,6 +19,8 @@ import { useStopwatch } from "react-timer-hook";
 import ReactNoSleep from "react-no-sleep";
 import "./style.css";
 import { useLocalStorage } from "./LocalStorage";
+import imageAbout from "./img/logo-about.png";
+import imageHome from "./img/logo-home.png";
 
 const App = () => {
   const [username, setUsername] = useLocalStorage("name", "");
@@ -29,9 +31,14 @@ const App = () => {
     setUsername(name);
   };
 
-  // const { seconds, minutes, hours, start, pause, reset } = useStopwatch({
-  //   autoStart: false,
-  // });
+  useEffect(() => {
+    const pictures = [imageAbout, imageHome];
+    pictures.forEach((picture) => {
+      console.log(picture);
+      const img = new Image();
+      img.src = picture;
+    });
+  }, []);
 
   const [seconds, setSeconds] = useLocalStorage("secs", 0);
   const [minutes, setMinutes] = useLocalStorage("mins", 0);
