@@ -39,6 +39,9 @@
   border-radius: 10px;
 }
 
+.timer {
+  font-size: 1.5rem;
+}
 /* .map {
   position: relative;
 } */

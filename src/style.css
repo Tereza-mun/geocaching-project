@@ -28,6 +28,8 @@ body {
 
 .container {
   margin: 0 auto;
+  height: 100vh;
+  padding: 20px;
   /* border: 1px solid black; */
 }
 

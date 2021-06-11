@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-
 import logo from "../img/logo-chat.png";
-
 import "./style.css";
 
-const Question = (props) => {
-  console.log(props.currentQuestion);
+const Question = ({ currentQuestion, score, isOpen }) => {
+  console.log(currentQuestion);
 
-  const otazka = props.currentQuestion.questionText;
-  const moznosti = props.currentQuestion.answerOptions;
+  const otazka = currentQuestion.questionText;
+  const moznosti = currentQuestion.answerOptions;
 
   const [failTry, setFailTry] = useState(0);
 
@@ -21,34 +19,35 @@ const Question = (props) => {
 
   const addPoints = () => {
     if (failTry === 0) {
-      props.score(1000);
+      score(1000);
     } else if (failTry === 1) {
-      props.score(750);
+      score(750);
     } else if (failTry === 2) {
-      props.score(500);
+      score(500);
     } else {
-      props.score(250);
+      score(250);
     }
   };
 
   const handleQBtn = (isCorrect, index) => {
-    if (isCorrect) {
-      console.log("bomba");
-      addPoints();
-    } else {
-      console.log("fml");
-      setFailTry(failTry + 1);
-    }
-
     const newClickedAnswers = [...clickedAnswers];
     newClickedAnswers[index] = true;
 
     setClickedAnswers(newClickedAnswers);
     console.log(clickedAnswers);
+    if (isCorrect) {
+      console.log("bomba");
+      isOpen(false);
+      addPoints();
+      setClickedAnswers([false, false, false, false]);
+    } else {
+      console.log("fml");
+      setFailTry(failTry + 1);
+    }
   };
 
   return (
-    <>
+    <div className="question">
       <div className="bubbleWrapper">
         <div className="otherBubble other">{otazka}</div>
       </div>
@@ -71,13 +70,13 @@ const Question = (props) => {
         ))}
       </div>
 
-      <div className="timer">
+      {/* <div className="timer">
         <p>
           Time elapsed: <span>{props.hours}</span>:<span>{props.minutes}</span>:
           <span>{props.seconds}</span>
         </p>
-      </div>
-    </>
+      </div> */}
+    </div>
   );
 };
 

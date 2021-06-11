@@ -18,9 +18,10 @@ import Popup from "reactjs-popup";
 import { useStopwatch } from "react-timer-hook";
 import ReactNoSleep from "react-no-sleep";
 import "./style.css";
+import { useLocalStorage } from "./LocalStorage";
 
 const App = () => {
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useLocalStorage("name", "");
 
   const history = useHistory();
 
@@ -28,31 +29,76 @@ const App = () => {
     setUsername(name);
   };
 
-  const { seconds, minutes, hours, start, pause, reset } = useStopwatch({
-    autoStart: false,
-  });
+  // const { seconds, minutes, hours, start, pause, reset } = useStopwatch({
+  //   autoStart: false,
+  // });
 
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [seconds, setSeconds] = useLocalStorage("secs", 0);
+  const [minutes, setMinutes] = useLocalStorage("mins", 0);
+  const [hours, setHours] = useLocalStorage("hrs", 0);
+
+  const [isActive, setIsActive] = useLocalStorage("active", false);
+
+  const start = () => {
+    setIsActive(!isActive);
+  };
+
+  const reset = () => {
+    setSeconds(0);
+    setMinutes(0);
+    setHours(0);
+    setIsActive(false);
+  };
+
+  useEffect(() => {
+    let interval = null;
+    if (isActive) {
+      interval = setInterval(() => {
+        setSeconds(seconds + 1);
+      }, 1000);
+      if (seconds === 60) {
+        setMinutes(minutes + 1);
+        setSeconds(0);
+        if (minutes === 60) {
+          setHours(hours + 1);
+          setSeconds(0);
+          setMinutes(0);
+        }
+      }
+    } else if (!isActive && seconds !== 0) {
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval);
+  }, [isActive, seconds]);
+
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useLocalStorage(
+    "questionIndex",
+    0,
+  );
   const currentQuestion = pinpoints[currentQuestionIndex];
-  const [score, setScore] = useState(0);
+
+  const [score, setScore] = useLocalStorage("currentScore", 0);
 
   const handleCorrect = (pointsAdded) => {
     setScore(score + pointsAdded);
 
     if (currentQuestionIndex + 1 >= pinpoints.length) {
-      pause();
+      // pause();
       history.push("/congratulation");
       return;
     }
 
     setCurrentQuestionIndex(currentQuestionIndex + 1);
     history.push("/map00");
+    scrollTo();
   };
 
   const handleExit = () => {
     console.log("Exit works");
     setScore(0);
     setCurrentQuestionIndex(0);
+    reset();
+    // pause();
   };
 
   return (
@@ -118,31 +164,30 @@ const App = () => {
               <About />
             </Route>
             <Route exact path="/">
-              <Username helloUsername={handleHello} enable={enable} />
+              <Username
+                helloUsername={handleHello}
+                enable={enable}
+                scrollTo={handleCorrect}
+              />
             </Route>
             <Route exact path="/map00">
               <Map00
                 currentQuestion={currentQuestion}
                 usernameW={username}
                 scoreCounter={score}
-                hours={String(hours).padStart(2, "0")}
-                minutes={String(minutes).padStart(2, "0")}
-                seconds={String(seconds).padStart(2, "0")}
-                start={start}
-                stop={pause}
-              />
-            </Route>
-            <Route exact path="/question">
-              <Question
-                currentQuestion={currentQuestion}
                 score={handleCorrect}
                 hours={String(hours).padStart(2, "0")}
                 minutes={String(minutes).padStart(2, "0")}
                 seconds={String(seconds).padStart(2, "0")}
                 start={start}
-                stop={pause}
               />
             </Route>
+            {/* <Route exact path="/question">
+              <Question
+                currentQuestion={currentQuestion}
+                score={handleCorrect}
+              />
+            </Route> */}
             <Route exact path="/congratulation">
               <Congrat
                 onLeave={handleExit}

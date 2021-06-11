@@ -9,6 +9,10 @@ const Username = (props) => {
   const handleUsernameSubmit = () => {
     props.enable();
     props.helloUsername(values);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   const handleUsernameInput = (e) => {

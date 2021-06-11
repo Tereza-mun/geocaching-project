@@ -15,35 +15,35 @@ export const pinpoints = [
       { answerText: 12, isCorrect: true },
     ],
   },
-  {
-    // PLANETARIUM - GIORDANO BRUNO
-    id: 1,
-    ikonaUrl: infoUrl,
-    latitude: 50.105291,
-    longitude: 14.427648,
-    questionText:
-      "What is the name of the philosopher and astronomer on the plaque of the planetarium?",
-    answerOptions: [
-      { answerText: "Aristoteles", isCorrect: false },
-      { answerText: "Buzz Aldrin", isCorrect: false },
-      { answerText: "Giordano Bruno", isCorrect: true },
-      { answerText: "Neil Armstrong", isCorrect: false },
-    ],
-  },
-  {
-    // RYBNIK - DUCK HEADS alebo ROSTLINKY TABULA
-    id: 2,
-    ikonaUrl: infoUrl,
-    latitude: 50.1070722,
-    longitude: 14.4221119,
-    questionText: "What animal does the wooden pier represent?",
-    answerOptions: [
-      { answerText: "Duck", isCorrect: true },
-      { answerText: "Swan", isCorrect: false },
-      { answerText: "Frog", isCorrect: false },
-      { answerText: "Goose", isCorrect: false },
-    ],
-  },
+  // {
+  //   // PLANETARIUM - GIORDANO BRUNO
+  //   id: 1,
+  //   ikonaUrl: infoUrl,
+  //   latitude: 50.105291,
+  //   longitude: 14.427648,
+  //   questionText:
+  //     "What is the name of the philosopher and astronomer on the plaque of the planetarium?",
+  //   answerOptions: [
+  //     { answerText: "Aristoteles", isCorrect: false },
+  //     { answerText: "Buzz Aldrin", isCorrect: false },
+  //     { answerText: "Giordano Bruno", isCorrect: true },
+  //     { answerText: "Neil Armstrong", isCorrect: false },
+  //   ],
+  // },
+  // {
+  //   // RYBNIK - DUCK HEADS alebo ROSTLINKY TABULA
+  //   id: 2,
+  //   ikonaUrl: infoUrl,
+  //   latitude: 50.1070722,
+  //   longitude: 14.4221119,
+  //   questionText: "What animal does the wooden pier represent?",
+  //   answerOptions: [
+  //     { answerText: "Duck", isCorrect: true },
+  //     { answerText: "Swan", isCorrect: false },
+  //     { answerText: "Frog", isCorrect: false },
+  //     { answerText: "Goose", isCorrect: false },
+  //   ],
+  // },
   // {
   //   // CITARNA
   //   id: 3,
@@ -100,20 +100,20 @@ export const pinpoints = [
   //     { answerText: 1851, isCorrect: false },
   //   ],
   // },
-  {
-    // OSTROVCEK - JEZERO SLUNECNICE
-    id: 7,
-    ikonaUrl: infoUrl,
-    latitude: 50.1062383,
-    longitude: 14.4166774,
-    questionText: "What is the name of the pond surrounding the island?",
-    answerOptions: [
-      { answerText: "Šestáček", isCorrect: false },
-      { answerText: "Rozínek", isCorrect: false },
-      { answerText: "Srpeček", isCorrect: false },
-      { answerText: "Slunečnice", isCorrect: true },
-    ],
-  },
+  // {
+  //   // OSTROVCEK - JEZERO SLUNECNICE
+  //   id: 7,
+  //   ikonaUrl: infoUrl,
+  //   latitude: 50.1062383,
+  //   longitude: 14.4166774,
+  //   questionText: "What is the name of the pond surrounding the island?",
+  //   answerOptions: [
+  //     { answerText: "Šestáček", isCorrect: false },
+  //     { answerText: "Rozínek", isCorrect: false },
+  //     { answerText: "Srpeček", isCorrect: false },
+  //     { answerText: "Slunečnice", isCorrect: true },
+  //   ],
+  // },
   {
     // SLECHTOVA RESTAURACE - 30 HLAV
     id: 8,

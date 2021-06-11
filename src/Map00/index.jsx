@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
 import ReactMapGL, {
   Marker,
-  Popup,
   GeolocateControl,
   WebMercatorViewport,
 } from "react-map-gl";
@@ -13,8 +12,19 @@ import "./style.css";
 import { pinpoints } from "./pinpoints.js";
 import { useHistory } from "react-router-dom";
 import { useStopwatch } from "react-timer-hook";
+import Question from "../Question/index";
+import Popup from "reactjs-popup";
 
-const Map00 = (props) => {
+const Map00 = ({
+  currentQuestion,
+  score,
+  usernameW,
+  scoreCounter,
+  hours,
+  minutes,
+  seconds,
+  start,
+}) => {
   const getDistance = (point1, point2) => {
     const R = 6371e3; // metres
     const φ1 = (point1.latitude * Math.PI) / 180; // φ, λ in radians
@@ -32,7 +42,7 @@ const Map00 = (props) => {
     return d;
   };
 
-  const history = useHistory();
+  // const history = useHistory();
 
   const [inRange, setInRange] = useState(false);
 
@@ -41,6 +51,8 @@ const Map00 = (props) => {
     longitude: 14.4310347,
     zoom: 14,
   });
+
+  const [isOpen, setIsOpen] = useState(false);
 
   const getViewport = (point1, point2) => {
     return new WebMercatorViewport({
@@ -61,8 +73,8 @@ const Map00 = (props) => {
   const handleCurrentLocation = (e) => {
     const userLocation = e.coords;
     const questionLocation = {
-      latitude: props.currentQuestion.latitude,
-      longitude: props.currentQuestion.longitude,
+      latitude: currentQuestion.latitude,
+      longitude: currentQuestion.longitude,
     };
 
     const distance = getDistance(userLocation, questionLocation);
@@ -81,8 +93,9 @@ const Map00 = (props) => {
   };
 
   const handleNextQuestion = () => {
-    props.start();
-    history.push("/question");
+    setIsOpen(true);
+    start();
+    // history.push("/question");
   };
 
   const message = inRange ? "Show question" : "Get closer";
@@ -90,7 +103,7 @@ const Map00 = (props) => {
   return (
     <>
       <div className="score">
-        {props.usernameW}: {props.scoreCounter} points
+        {usernameW}: {scoreCounter} points
       </div>
       <ReactMapGL
         {...viewport}
@@ -132,8 +145,8 @@ const Map00 = (props) => {
         </div>
 
         <Marker
-          latitude={props.currentQuestion.latitude}
-          longitude={props.currentQuestion.longitude}
+          latitude={currentQuestion.latitude}
+          longitude={currentQuestion.longitude}
           offsetLeft={-25}
           offsetTop={-50}
         >
@@ -142,19 +155,34 @@ const Map00 = (props) => {
           </button>
         </Marker>
 
-        <button
-          onClick={handleNextQuestion}
-          className={inRange ? "btn btn--on" : "btn"}
-          disabled={!inRange}
+        {!isOpen && (
+          <button
+            onClick={handleNextQuestion}
+            className={inRange ? "btn btn--on" : "btn"}
+            disabled={!inRange}
+          >
+            {message}
+          </button>
+        )}
+
+        <Popup
+          modal={true}
+          open={isOpen}
+          overlayStyle={{ background: "rgba(0,0,0,0.4)" }}
+          onClose={() => setIsOpen(false)}
         >
-          {message}
-        </button>
+          <Question
+            currentQuestion={currentQuestion}
+            score={score}
+            isOpen={setIsOpen}
+          />
+        </Popup>
       </ReactMapGL>
 
       <div className="timer">
         <p>
-          Time elapsed: <span>{props.hours}</span>:<span>{props.minutes}</span>:
-          <span>{props.seconds}</span>
+          Timer: <span>{hours}</span>:<span>{minutes}</span>:
+          <span>{seconds}</span>
         </p>
       </div>
     </>
