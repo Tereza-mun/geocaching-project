@@ -41,3 +41,10 @@
   font-size: 0.6rem;
   font-family: "PT Sans Narrow";
 }
+
+.btn-username {
+  margin-top: 10px;
+}
+.element-hidden {
+  display: none;
+}

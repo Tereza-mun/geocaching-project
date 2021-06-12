@@ -87,17 +87,17 @@ export const pinpoints = [
   //   ],
   // },
   // {
-  //   // PAMATNIK MECSEROVY SILNICE
-  //   id: 6,
+  //   // START POINT
+  //   id: 0,
   //   ikonaUrl: infoUrl,
-  //   latitude: 50.1044306,
-  //   longitude: 14.4150547,
-  //   questionText: "What year is stated on the stone monument?",
+  //   latitude: 50.1045369,
+  //   longitude: 14.4310347,
+  //   questionText: "How many columns does the left fountain have?",
   //   answerOptions: [
-  //     { answerText: 1869, isCorrect: false },
-  //     { answerText: 1888, isCorrect: false },
-  //     { answerText: 1861, isCorrect: true },
-  //     { answerText: 1851, isCorrect: false },
+  //     { answerText: 10, isCorrect: false },
+  //     { answerText: 13, isCorrect: false },
+  //     { answerText: 14, isCorrect: false },
+  //     { answerText: 12, isCorrect: true },
   //   ],
   // },
   // {

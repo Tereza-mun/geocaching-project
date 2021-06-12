@@ -37,22 +37,31 @@ const Username = (props) => {
           placeholder="Username"
         />
 
-        <p className="paragraph-username">
+        {/* <p
+          className={
+            values !== ""
+              ? "paragraph-username element-hidden"
+              : "paragraph-username"
+          }
+        >
           Create a username to start your journey
-        </p>
+        </p> */}
         <Link style={{ textDecoration: "none" }} to="/map00">
           {values.length < 2 ? (
             <button
+              className="btn-username"
               onClick={handleUsernameSubmit}
               disabled
               style={{
-                border: "solid grey",
+                border: "none",
               }}
             >
-              Start Game
+              Create your username
             </button>
           ) : (
-            <button onClick={handleUsernameSubmit}>Start Game</button>
+            <button className="btn-username" onClick={handleUsernameSubmit}>
+              Start Game
+            </button>
           )}
         </Link>
       </form>
