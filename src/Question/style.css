@@ -13,28 +13,6 @@
   min-width: 270px;
   max-width: 70%;
 }
-/* .bubbleWrapper {
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  align-self: flex-end;
-  color: rgb(0, 0, 0);
-  width: 100%;
-} */
-
-/* .otherBubble {
-  font-size: 1.3rem;
-  min-width: 60px;
-  max-width: 700px;
-  padding: 22px 22px;
-  background-color: #eb9c48;
-  border-radius: 10px 10px 10px 10px;
-  width: 100%;
-}
-
-.other {
-  align-self: flex-start;
-} */
 
 .questionOptions button {
   width: 100%;

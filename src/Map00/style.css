@@ -22,14 +22,16 @@
 
 .btn {
   background-color: #d8d8d8cb;
-  border: 2px solid #a9a7a7cb;
+  border: 1px solid #a9a7a7cb;
   color: rgba(0, 0, 0, 0.571);
   border-radius: 10px;
   font-size: 1.5rem;
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  left: 10px;
+  bottom: 0px;
+  right: 0;
+  left: 0;
+  padding: 20px;
+  width: 100%;
 }
 
 .btn--on {
@@ -37,7 +39,9 @@
   border: 2px solid white;
   color: white;
   border-radius: 10px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  width: 70%;
 }
 
 .timer {
