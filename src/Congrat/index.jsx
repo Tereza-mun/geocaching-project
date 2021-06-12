@@ -20,15 +20,16 @@ const Congrat = ({
 
   return (
     <>
-      <h2 className="heading">Congratulations {usernameW}!</h2>
+      <h2 className="heading">Congratulations</h2>
+      <h3 className="subheading">{usernameW}!</h3>
       <img className="logo-congrat" src={logo}></img>
 
-      <button className="btn-points">{scoreCounter} POINTS</button>
+      <button className="btn-winner">{scoreCounter} POINTS</button>
 
-      <div>
+      <p className="paragraph-congrat">
         You have finished this game in {hours}: {minutes}: {seconds} and walked
         over 4 kms.
-      </div>
+      </p>
     </>
   );
 };

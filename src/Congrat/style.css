@@ -1,16 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap");
 
-.heading {
+.heading,
+.subheading {
   text-align: center;
   max-width: 90%;
   margin: 5px auto;
-  font-size: 3rem;
+}
+
+/* Pridano start */
+.heading {
+  font-size: 2.5rem;
+}
+
+.subheading {
+  font-size: 2rem;
 }
 
 .logo-congrat {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.paragraph-congrat {
+  text-align: center;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.4rem;
+  font-family: "PT Sans Narrow";
+}
+
+.btn-winner {
+  background-color: #fdd626;
+  border: 2px yellow;
 }
