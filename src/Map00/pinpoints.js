@@ -44,20 +44,20 @@ export const pinpoints = [
   //     { answerText: "Goose", isCorrect: false },
   //   ],
   // },
-  // {
-  //   // CITARNA
-  //   id: 3,
-  //   ikonaUrl: infoUrl,
-  //   latitude: 50.1076472,
-  //   longitude: 14.4176525,
-  //   questionText: "What is the location which you just reached used for?",
-  //   answerOptions: [
-  //     { answerText: "Order a coffee", isCorrect: false },
-  //     { answerText: "Borrow a book", isCorrect: true },
-  //     { answerText: "Restroom", isCorrect: false },
-  //     { answerText: "Rent a bike", isCorrect: false },
-  //   ],
-  // },
+  {
+    // CITARNA
+    id: 3,
+    ikonaUrl: infoUrl,
+    latitude: 50.1076472,
+    longitude: 14.4176525,
+    questionText: "What is the location which you just reached used for?",
+    answerOptions: [
+      { answerText: "Order a coffee", isCorrect: false },
+      { answerText: "Borrow a book", isCorrect: true },
+      { answerText: "Restroom", isCorrect: false },
+      { answerText: "Rent a bike", isCorrect: false },
+    ],
+  },
   // {
   //   // STARA FONTANA + JAPANESE TREE
   //   id: 4,
@@ -100,20 +100,20 @@ export const pinpoints = [
   //     { answerText: 1851, isCorrect: false },
   //   ],
   // },
-  {
-    // OSTROVCEK - JEZERO SLUNECNICE
-    id: 7,
-    ikonaUrl: infoUrl,
-    latitude: 50.1062383,
-    longitude: 14.4166774,
-    questionText: "What is the name of the pond surrounding the island?",
-    answerOptions: [
-      { answerText: "Šestáček", isCorrect: false },
-      { answerText: "Rozínek", isCorrect: false },
-      { answerText: "Srpeček", isCorrect: false },
-      { answerText: "Slunečnice", isCorrect: true },
-    ],
-  },
+  // {
+  //   // OSTROVCEK - JEZERO SLUNECNICE
+  //   id: 7,
+  //   ikonaUrl: infoUrl,
+  //   latitude: 50.1062383,
+  //   longitude: 14.4166774,
+  //   questionText: "What is the name of the pond surrounding the island?",
+  //   answerOptions: [
+  //     { answerText: "Šestáček", isCorrect: false },
+  //     { answerText: "Rozínek", isCorrect: false },
+  //     { answerText: "Srpeček", isCorrect: false },
+  //     { answerText: "Slunečnice", isCorrect: true },
+  //   ],
+  // },
   {
     // SLECHTOVA RESTAURACE - 30 HLAV
     id: 8,
