@@ -104,8 +104,8 @@ const App = () => {
     }
 
     setCurrentQuestionIndex(currentQuestionIndex + 1);
-    history.push("/map");
     setHideElement(true);
+    history.push("/map");
   };
 
   const handleExit = () => {
@@ -182,7 +182,6 @@ const App = () => {
               <Home
                 helloUsername={handleHello}
                 enable={enable}
-                scrollTo={handleCorrect}
                 hideElement={hideElement}
               />
             </Route>

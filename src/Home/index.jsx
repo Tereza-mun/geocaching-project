@@ -4,16 +4,16 @@ import { useLocalStorage } from "../LocalStorage";
 import logo from "../img/logo-home.png";
 import "./style.css";
 
-const Home = ({ enable, helloUsername, scrollTo, hideElement }) => {
+const Home = ({ enable, helloUsername, hideElement }) => {
   const [values, setValues] = useLocalStorage("username", "");
 
   const handleUsernameSubmit = () => {
     enable();
     helloUsername(values);
-    scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    // scrollTo({
+    //   top: 0,
+    //   behavior: "smooth",
+    // });
   };
 
   const handleUsernameInput = (e) => {

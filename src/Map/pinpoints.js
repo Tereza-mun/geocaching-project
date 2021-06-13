@@ -22,7 +22,7 @@ export const pinpoints = [
     latitude: 50.105291,
     longitude: 14.427648,
     questionText:
-      "What is the name of the philosopher and astronomer on the plaque of the planetarium?",
+      "What is the name of the philosopher and astronomer on the plaque at the entrance of the planetarium?",
     answerOptions: [
       { answerText: "Aristoteles", isCorrect: false },
       { answerText: "Buzz Aldrin", isCorrect: false },
