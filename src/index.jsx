@@ -136,7 +136,7 @@ const App = () => {
                     <div className="rules">
                       <p>
                         {" "}
-                        &#8226; There are 8 checkpoints, each holding a
+                        &#8226; There are 9 checkpoints, each holding a
                         question, which can be revealed when you get close to
                         them.
                       </p>

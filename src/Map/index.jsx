@@ -8,8 +8,6 @@ import ReactMapGL, {
 import spendlikUrl from "../img/spendlik.svg";
 import "./marker.css";
 import "./style.css";
-import { pinpoints } from "./pinpoints.js";
-import { useHistory } from "react-router-dom";
 import Question from "../Question/index";
 import Popup from "reactjs-popup";
 
