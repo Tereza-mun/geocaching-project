@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { useLocalStorage } from "../LocalStorage";
 import logo from "../img/logo-home.png";
 import "./style.css";
 
-const Username = (props) => {
-  const [values, setValues] = useState("");
+const Username = ({ enable, helloUsername, scrollTo, hideElement }) => {
+  const [values, setValues] = useLocalStorage("username", "");
 
   const handleUsernameSubmit = () => {
-    props.enable();
-    props.helloUsername(values);
-    window.scrollTo({
+    enable();
+    helloUsername(values);
+    scrollTo({
       top: 0,
       behavior: "smooth",
     });
@@ -30,27 +31,17 @@ const Username = (props) => {
       </p>
       <form className="username-form">
         <input
-          className="username-input"
+          className={hideElement ? "element-hidden" : "username-input"}
           value={values}
           onChange={handleUsernameInput}
           type="text"
           placeholder="Username"
         />
 
-        {/* <p
-          className={
-            values !== ""
-              ? "paragraph-username element-hidden"
-              : "paragraph-username"
-          }
-        >
-          Create a username to start your journey
-        </p> */}
         <Link style={{ textDecoration: "none" }} to="/map00">
           {values.length < 2 ? (
             <button
-              className="btn-username"
-              onClick={handleUsernameSubmit}
+              // onClick={handleUsernameSubmit}
               disabled
               style={{
                 border: "none",
@@ -59,8 +50,8 @@ const Username = (props) => {
               Create your username
             </button>
           ) : (
-            <button className="btn-username" onClick={handleUsernameSubmit}>
-              Start Game
+            <button onClick={handleUsernameSubmit} className="btn-username">
+              {hideElement ? "Back to Game" : "Start Game"}
             </button>
           )}
         </Link>

@@ -24,9 +24,9 @@
   font-family: "PT Sans Narrow";
   font-size: 1.2rem;
   width: 70%;
-  background-color: #fcfcfc;
+  background-color: white;
   border: 0;
-  border-bottom: 2px solid black;
+  border: 2px solid black;
   padding: 7px;
 }
 

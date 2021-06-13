@@ -41,6 +41,8 @@ const App = () => {
     });
   }, []);
 
+  const [hideElement, setHideElement] = useLocalStorage("hide", false);
+
   const [seconds, setSeconds] = useLocalStorage("secs", 0);
   const [minutes, setMinutes] = useLocalStorage("mins", 0);
   const [hours, setHours] = useLocalStorage("hrs", 0);
@@ -102,7 +104,7 @@ const App = () => {
 
     setCurrentQuestionIndex(currentQuestionIndex + 1);
     history.push("/map00");
-    scrollTo();
+    setHideElement(true);
   };
 
   const handleExit = () => {
@@ -110,6 +112,7 @@ const App = () => {
     setScore(0);
     setCurrentQuestionIndex(0);
     reset();
+    setHideElement(false);
   };
 
   return (
@@ -179,6 +182,7 @@ const App = () => {
                 helloUsername={handleHello}
                 enable={enable}
                 scrollTo={handleCorrect}
+                hideElement={hideElement}
               />
             </Route>
             <Route exact path="/map00">
