@@ -8,14 +8,15 @@
   margin: 5px auto;
 }
 
-.heading {
-  font-size: 3rem;
+.heading-about {
+  font-size: 2.5rem;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .subheading {
   font-size: 2rem;
 }
-/* Pridano end */
 
 .logo-about {
   display: block;
@@ -25,7 +26,6 @@
 }
 
 .paragraph-about {
-  /* zmenen z center */
   text-align: center;
   max-width: 90%;
   margin-left: auto;

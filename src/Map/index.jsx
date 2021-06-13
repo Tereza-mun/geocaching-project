@@ -15,8 +15,10 @@ import Popup from "reactjs-popup";
 
 const Map = ({
   currentQuestion,
+  userLocation,
+  setUserLocation,
   score,
-  usernameW,
+  username,
   scoreCounter,
   hours,
   minutes,
@@ -35,7 +37,6 @@ const Map = ({
       Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) * Math.sin(Δλ / 2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     const d = R * c;
-    console.log(d);
 
     return d;
   };
@@ -49,8 +50,6 @@ const Map = ({
   });
 
   const [isOpen, setIsOpen] = useState(false);
-
-  const [userLocation, setUserLocation] = useState();
 
   const getViewport = (point1, point2) => {
     return new WebMercatorViewport({
@@ -88,7 +87,6 @@ const Map = ({
       ...nextViewport,
       zoom: Math.min(nextViewport.zoom, 16),
     };
-    console.log(finalViewport);
     setViewport(finalViewport);
   };
 
@@ -108,7 +106,7 @@ const Map = ({
   return (
     <>
       <div className="score">
-        {usernameW}: {scoreCounter} points
+        {username}: {scoreCounter} points
       </div>
       <ReactMapGL
         {...viewport}

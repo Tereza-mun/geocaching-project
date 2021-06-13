@@ -28,13 +28,11 @@ body {
 .container {
   margin: 0 auto;
   height: 100vh;
-  padding: 20px;
-  /* border: 1px solid black; */
 }
 
 .nav-ul {
   font-size: 1.5rem;
-  margin-top: 0;
+  margin-top: 15px;
   background-size: 50px 50px;
   background-repeat: no-repeat;
   display: flex;
@@ -68,7 +66,7 @@ body {
   width: 300px;
   min-width: 300px;
   max-width: 70%;
-  padding: 30px 15px;
+  padding: 0px 15px 40px;
   font-size: 1.2rem;
   font-family: "PT Sans Narrow", sans-serif;
   border: 1px solid black;
@@ -77,10 +75,11 @@ body {
 
 .btn--close {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 0px;
-  padding: 5px 10px;
+  padding: 5px 30px;
   font-size: 1rem;
   background-color: #e1d3b6;
   font-family: "PT Sans Narrow";

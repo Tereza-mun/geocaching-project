@@ -34,7 +34,6 @@ const App = () => {
   useEffect(() => {
     const pictures = [imageAbout, imageHome, imageTrophy];
     pictures.forEach((picture) => {
-      console.log(picture);
       const img = new Image();
       img.src = picture;
       window[picture] = img;
@@ -92,6 +91,8 @@ const App = () => {
 
   const [score, setScore] = useLocalStorage("currentScore", 0);
 
+  const [userLocation, setUserLocation] = useState();
+
   const handleCorrect = (pointsAdded) => {
     setScore(score + pointsAdded);
 
@@ -105,7 +106,6 @@ const App = () => {
   };
 
   const handleExit = () => {
-    console.log("Exit works");
     setScore(0);
     setCurrentQuestionIndex(0);
     reset();
@@ -160,7 +160,7 @@ const App = () => {
                           close();
                         }}
                       >
-                        x
+                        Close
                       </button>
                     </div>
                   )}
@@ -184,8 +184,10 @@ const App = () => {
             <Route exact path="/map">
               <Map
                 key={currentQuestion.latitude}
+                userLocation={userLocation}
+                setUserLocation={setUserLocation}
                 currentQuestion={currentQuestion}
-                usernameW={username}
+                username={username}
                 scoreCounter={score}
                 score={handleCorrect}
                 hours={String(hours).padStart(2, "0")}
@@ -197,7 +199,7 @@ const App = () => {
             <Route exact path="/congratulations">
               <Congratulations
                 onLeave={handleExit}
-                usernameW={username}
+                username={username}
                 scoreCounter={score}
                 hours={String(hours).padStart(2, "0")}
                 minutes={String(minutes).padStart(2, "0")}

@@ -5,11 +5,11 @@ import "./style.css";
 const About = () => {
   return (
     <>
-      <h2 className="heading">ABOUT PROJECT</h2>
+      <h2 className="heading-about">ABOUT THE PROJECT</h2>
       <img className="logo-about" src={logo}></img>
       <p className="paragraph-about">
         Geocaching was built as a final project for the successful completion of
-        the 3-months Web Development course in
+        the 3-months Web Development course at
         <br />
         <a href="https://www.czechitas.cz/cs/">
           Digital Academy with Czechitas

@@ -3,8 +3,6 @@ import logo from "../img/logo-chat.png";
 import "./style.css";
 
 const Question = ({ currentQuestion, score, isOpen, setInRange }) => {
-  console.log(currentQuestion);
-
   const question = currentQuestion.questionText;
   const options = currentQuestion.answerOptions;
 
@@ -34,15 +32,12 @@ const Question = ({ currentQuestion, score, isOpen, setInRange }) => {
     newClickedAnswers[index] = true;
 
     setClickedAnswers(newClickedAnswers);
-    console.log(clickedAnswers);
     if (isCorrect) {
-      console.log("correct");
       isOpen(false);
       addPoints();
       setClickedAnswers([false, false, false, false]);
       setInRange(false);
     } else {
-      console.log("wrong");
       setFailTry(failTry + 1);
     }
   };

@@ -27,6 +27,7 @@ const Home = ({ enable, helloUsername, username, currentQuestionIndex }) => {
       </p>
       <form className="username-form">
         <input
+          onBlur={() => window.scrollTo(0, 0)}
           className={username !== "" ? "element-hidden" : "username-input"}
           value={values}
           onChange={handleUsernameInput}

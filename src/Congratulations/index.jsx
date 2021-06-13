@@ -4,7 +4,7 @@ import logo from "../img/trophy.png";
 import "./style.css";
 
 const Congratulations = ({
-  usernameW,
+  username,
   scoreCounter,
   onLeave,
   hours,
@@ -13,7 +13,6 @@ const Congratulations = ({
 }) => {
   useEffect(() => {
     return () => {
-      console.log("player leaving");
       onLeave();
     };
   }, []);
@@ -21,7 +20,7 @@ const Congratulations = ({
   return (
     <>
       <h2 className="subheading">Congratulations</h2>
-      <h3 className="subheading">{usernameW}!</h3>
+      <h3 className="subheading">{username}!</h3>
       <img className="logo-congrat" src={logo}></img>
 
       <button className="btn-winner">{scoreCounter} POINTS</button>

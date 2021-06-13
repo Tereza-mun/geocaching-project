@@ -18,11 +18,8 @@
 
 .logo-congrat {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px auto;
+  width: 80%;
 }
 
 .paragraph-congrat {
