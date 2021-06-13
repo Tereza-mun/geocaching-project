@@ -20,7 +20,7 @@ const Congratulations = ({
 
   return (
     <>
-      <h2 className="heading">Congratulations</h2>
+      <h2 className="subheading">Congratulations</h2>
       <h3 className="subheading">{usernameW}!</h3>
       <img className="logo-congrat" src={logo}></img>
 
