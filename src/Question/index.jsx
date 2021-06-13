@@ -70,13 +70,6 @@ const Question = ({ currentQuestion, score, isOpen, setInRange }) => {
           </button>
         ))}
       </div>
-
-      {/* <div className="timer">
-        <p>
-          Time elapsed: <span>{props.hours}</span>:<span>{props.minutes}</span>:
-          <span>{props.seconds}</span>
-        </p>
-      </div> */}
     </div>
   );
 };

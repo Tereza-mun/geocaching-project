@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import logo from "../img/trophy.png";
 import "./style.css";
 
-const Congrat = ({
+const Congratulations = ({
   usernameW,
   scoreCounter,
   onLeave,
@@ -33,4 +33,4 @@ const Congrat = ({
     </>
   );
 };
-export default Congrat;
+export default Congratulations;

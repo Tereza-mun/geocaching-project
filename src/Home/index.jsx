@@ -4,7 +4,7 @@ import { useLocalStorage } from "../LocalStorage";
 import logo from "../img/logo-home.png";
 import "./style.css";
 
-const Username = ({ enable, helloUsername, scrollTo, hideElement }) => {
+const Home = ({ enable, helloUsername, scrollTo, hideElement }) => {
   const [values, setValues] = useLocalStorage("username", "");
 
   const handleUsernameSubmit = () => {
@@ -38,10 +38,9 @@ const Username = ({ enable, helloUsername, scrollTo, hideElement }) => {
           placeholder="Username"
         />
 
-        <Link style={{ textDecoration: "none" }} to="/map00">
+        <Link style={{ textDecoration: "none" }} to="/map">
           {values.length < 2 ? (
             <button
-              // onClick={handleUsernameSubmit}
               disabled
               style={{
                 border: "none",
@@ -59,4 +58,4 @@ const Username = ({ enable, helloUsername, scrollTo, hideElement }) => {
     </>
   );
 };
-export default Username;
+export default Home;

@@ -44,20 +44,20 @@ export const pinpoints = [
   //     { answerText: "Goose", isCorrect: false },
   //   ],
   // },
-  {
-    // CITARNA
-    id: 3,
-    ikonaUrl: infoUrl,
-    latitude: 50.1076472,
-    longitude: 14.4176525,
-    questionText: "What is the location which you just reached used for?",
-    answerOptions: [
-      { answerText: "Order a coffee", isCorrect: false },
-      { answerText: "Borrow a book", isCorrect: true },
-      { answerText: "Restroom", isCorrect: false },
-      { answerText: "Rent a bike", isCorrect: false },
-    ],
-  },
+  // {
+  //   // CITARNA
+  //   id: 3,
+  //   ikonaUrl: infoUrl,
+  //   latitude: 50.1076472,
+  //   longitude: 14.4176525,
+  //   questionText: "What is the location which you just reached used for?",
+  //   answerOptions: [
+  //     { answerText: "Order a coffee", isCorrect: false },
+  //     { answerText: "Borrow a book", isCorrect: true },
+  //     { answerText: "Restroom", isCorrect: false },
+  //     { answerText: "Rent a bike", isCorrect: false },
+  //   ],
+  // },
   // {
   //   // STARA FONTANA + JAPANESE TREE
   //   id: 4,

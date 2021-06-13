@@ -6,16 +6,14 @@ import ReactMapGL, {
   WebMercatorViewport,
 } from "react-map-gl";
 import spendlikUrl from "../img/spendlik.svg";
-// import infoUrl from "../img/magnifier.svg";
 import "./marker.css";
 import "./style.css";
 import { pinpoints } from "./pinpoints.js";
 import { useHistory } from "react-router-dom";
-import { useStopwatch } from "react-timer-hook";
 import Question from "../Question/index";
 import Popup from "reactjs-popup";
 
-const Map00 = ({
+const Map = ({
   currentQuestion,
   score,
   usernameW,
@@ -26,8 +24,8 @@ const Map00 = ({
   start,
 }) => {
   const getDistance = (point1, point2) => {
-    const R = 6371e3; // metres
-    const φ1 = (point1.latitude * Math.PI) / 180; // φ, λ in radians
+    const R = 6371e3;
+    const φ1 = (point1.latitude * Math.PI) / 180;
     const φ2 = (point2.latitude * Math.PI) / 180;
     const Δφ = ((point2.latitude - point1.latitude) * Math.PI) / 180;
     const Δλ = ((point2.longitude - point1.longitude) * Math.PI) / 180;
@@ -36,13 +34,11 @@ const Map00 = ({
       Math.sin(Δφ / 2) * Math.sin(Δφ / 2) +
       Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) * Math.sin(Δλ / 2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    const d = R * c; // in metres
+    const d = R * c;
     console.log(d);
 
     return d;
   };
-
-  // const history = useHistory();
 
   const [inRange, setInRange] = useState(false);
 
@@ -105,7 +101,6 @@ const Map00 = ({
   const handleNextQuestion = () => {
     setIsOpen(true);
     start();
-    // history.push("/question");
   };
 
   const message = inRange ? "Show question" : "Get closer to the next location";
@@ -138,7 +133,6 @@ const Map00 = ({
         }}
         width="100%"
         height={400}
-        // onViewportChange={(nextViewport) => setViewport(nextViewport)}
       >
         <div className="ovladani">
           <GeolocateControl
@@ -191,13 +185,11 @@ const Map00 = ({
       </ReactMapGL>
 
       <div className="timer">
-        <p>
-          Timer: <span>{hours}</span>:<span>{minutes}</span>:
-          <span>{seconds}</span>
-        </p>
+        Timer: <span>{hours}</span>:<span>{minutes}</span>:
+        <span>{seconds}</span>
       </div>
     </>
   );
 };
 
-export default Map00;
+export default Map;

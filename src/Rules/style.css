@@ -16,34 +16,6 @@
 .subheading {
   font-size: 2rem;
 }
-/* Pridano end */
-
-.rules {
-  /* zmenen z center */
-  text-align: center;
-  width: 290px;
-  max-width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1.2rem;
-  font-family: "PT Sans Narrow";
-  border: 1px solid black;
-  border-radius: 3px;
-  background-color: rgb(195, 245, 230);
-}
-
-/* .rules--on {
-  border: 1px solid black;
-  border-radius: 3px;
-  background-color: rgb(195, 245, 230);
-} */
-
-/* .logo-rules {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%;
-} */
 
 button {
   display: block;

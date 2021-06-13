@@ -9,11 +9,11 @@ import {
 import { render } from "react-dom";
 import About from "./About";
 import Rules from "./Rules";
-import Username from "./Username";
-import Map00 from "./Map00";
+import Home from "./Home";
+import Map from "./Map";
 import Question from "./Question";
-import Congrat from "./Congrat";
-import { pinpoints } from "./Map00/pinpoints";
+import Congratulations from "./Congratulations";
+import { pinpoints } from "./Map/pinpoints";
 import Popup from "reactjs-popup";
 import ReactNoSleep from "react-no-sleep";
 import "./style.css";
@@ -40,8 +40,6 @@ const App = () => {
       window[picture] = img;
     });
   }, []);
-
-  const [hideElement, setHideElement] = useLocalStorage("hide", false);
 
   const [seconds, setSeconds] = useLocalStorage("secs", 0);
   const [minutes, setMinutes] = useLocalStorage("mins", 0);
@@ -89,6 +87,9 @@ const App = () => {
     "questionIndex",
     0,
   );
+
+  const [hideElement, setHideElement] = useState(false);
+
   const currentQuestion = pinpoints[currentQuestionIndex];
 
   const [score, setScore] = useLocalStorage("currentScore", 0);
@@ -98,12 +99,12 @@ const App = () => {
 
     if (currentQuestionIndex + 1 >= pinpoints.length) {
       stop();
-      history.push("/congratulation");
+      history.push("/congratulations");
       return;
     }
 
     setCurrentQuestionIndex(currentQuestionIndex + 1);
-    history.push("/map00");
+    history.push("/map");
     setHideElement(true);
   };
 
@@ -178,15 +179,15 @@ const App = () => {
               <About />
             </Route>
             <Route exact path="/">
-              <Username
+              <Home
                 helloUsername={handleHello}
                 enable={enable}
                 scrollTo={handleCorrect}
                 hideElement={hideElement}
               />
             </Route>
-            <Route exact path="/map00">
-              <Map00
+            <Route exact path="/map">
+              <Map
                 currentQuestion={currentQuestion}
                 usernameW={username}
                 scoreCounter={score}
@@ -197,14 +198,8 @@ const App = () => {
                 start={start}
               />
             </Route>
-            {/* <Route exact path="/question">
-              <Question
-                currentQuestion={currentQuestion}
-                score={handleCorrect}
-              />
-            </Route> */}
-            <Route exact path="/congratulation">
-              <Congrat
+            <Route exact path="/congratulations">
+              <Congratulations
                 onLeave={handleExit}
                 usernameW={username}
                 scoreCounter={score}
