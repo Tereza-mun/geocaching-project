@@ -16,19 +16,19 @@
 
 .questionOptions button {
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   background-color: #d1e9b6;
   border: 0.2px dotted;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 10px;
 }
 
 .questionOptions button {
   position: relative;
   background-color: #098256e7;
   border: 2px solid white;
-  font-size: 28px;
+  font-size: 1.5rem;
   color: #ffffff;
-  padding: 20px;
+  padding: 10px;
   /* width: 200px; */
   text-align: center;
   -webkit-transition-duration: 0.4s;

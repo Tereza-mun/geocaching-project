@@ -112,6 +112,7 @@ const Map = ({
       </div>
       <ReactMapGL
         {...viewport}
+        onViewportChange={(nextViewport) => setViewport(nextViewport)}
         mapStyle={{
           version: 8,
           sources: {

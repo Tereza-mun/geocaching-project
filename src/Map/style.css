@@ -13,9 +13,7 @@
   background-color: #f7b239;
   border-radius: 15px;
   font-size: 1.3rem;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  width: auto;
+  margin: 0px auto 5px;
   padding: 12px;
   text-align: center;
 }
@@ -25,13 +23,13 @@
   border: 1px solid #a9a7a7cb;
   color: rgba(0, 0, 0, 0.571);
   border-radius: 10px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   position: absolute;
   bottom: 0px;
   right: 0;
   left: 0;
   padding: 20px;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .btn--on {
@@ -41,7 +39,7 @@
   border-radius: 10px;
   font-size: 1.5rem;
   margin-bottom: 10px;
-  width: 70%;
+  padding: 10px 20px;
 }
 
 .timer {
@@ -50,7 +48,3 @@
   margin-top: 5px;
   margin-bottom: 20px;
 }
-
-/* .map {
-  position: relative;
-} */

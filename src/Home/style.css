@@ -5,10 +5,8 @@
   width: 40%;
 }
 
-/* text pod img */
 .paragraph-home {
   text-align: center;
-  max-width: 80%;
   margin-left: auto;
   margin-right: auto;
   font-size: 1.3rem;
@@ -16,7 +14,6 @@
 }
 
 .username-form {
-  /* padding-top: 0.5rem; */
   text-align: center;
 }
 
@@ -30,21 +27,16 @@
   padding: 7px;
 }
 
-/* Create a username to start your journey */
-.paragraph-username {
-  text-align: center;
-  max-width: 90%;
-  margin-top: 1px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  font-size: 0.6rem;
-  font-family: "PT Sans Narrow";
-}
-
 .btn-username {
   margin-top: 10px;
+  padding: 10px 25px;
 }
+
+.btn-disabled {
+  border: none;
+  padding: 10px;
+}
+
 .element-hidden {
   display: none;
 }

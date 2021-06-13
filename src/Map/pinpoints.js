@@ -64,10 +64,10 @@ export const pinpoints = [
     ikonaUrl: infoUrl,
     latitude: 50.1058994,
     longitude: 14.4140292,
-    questionText: "What is the attribute of the tree closes to the fountain?",
+    questionText: "What is the attribute of the tree closest to the fountain?",
     answerOptions: [
       { answerText: "Chinese", isCorrect: false },
-      { answerText: "Philippines", isCorrect: false },
+      { answerText: "Filipino", isCorrect: false },
       { answerText: "Australian", isCorrect: false },
       { answerText: "Japanese", isCorrect: true },
     ],

@@ -88,8 +88,6 @@ const App = () => {
     0,
   );
 
-  const [hideElement, setHideElement] = useState(false);
-
   const currentQuestion = pinpoints[currentQuestionIndex];
 
   const [score, setScore] = useLocalStorage("currentScore", 0);
@@ -104,8 +102,6 @@ const App = () => {
     }
 
     setCurrentQuestionIndex(currentQuestionIndex + 1);
-    setHideElement(true);
-    history.push("/map");
   };
 
   const handleExit = () => {
@@ -113,7 +109,6 @@ const App = () => {
     setScore(0);
     setCurrentQuestionIndex(0);
     reset();
-    setHideElement(false);
   };
 
   return (
@@ -182,11 +177,13 @@ const App = () => {
               <Home
                 helloUsername={handleHello}
                 enable={enable}
-                hideElement={hideElement}
+                username={username}
+                currentQuestionIndex={currentQuestionIndex}
               />
             </Route>
             <Route exact path="/map">
               <Map
+                key={currentQuestion.latitude}
                 currentQuestion={currentQuestion}
                 usernameW={username}
                 scoreCounter={score}

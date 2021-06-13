@@ -4,16 +4,12 @@ import { useLocalStorage } from "../LocalStorage";
 import logo from "../img/logo-home.png";
 import "./style.css";
 
-const Home = ({ enable, helloUsername, hideElement }) => {
+const Home = ({ enable, helloUsername, username, currentQuestionIndex }) => {
   const [values, setValues] = useLocalStorage("username", "");
 
   const handleUsernameSubmit = () => {
     enable();
     helloUsername(values);
-    // scrollTo({
-    //   top: 0,
-    //   behavior: "smooth",
-    // });
   };
 
   const handleUsernameInput = (e) => {
@@ -31,7 +27,7 @@ const Home = ({ enable, helloUsername, hideElement }) => {
       </p>
       <form className="username-form">
         <input
-          className={hideElement ? "element-hidden" : "username-input"}
+          className={username !== "" ? "element-hidden" : "username-input"}
           value={values}
           onChange={handleUsernameInput}
           type="text"
@@ -40,17 +36,12 @@ const Home = ({ enable, helloUsername, hideElement }) => {
 
         <Link style={{ textDecoration: "none" }} to="/map">
           {values.length < 2 ? (
-            <button
-              disabled
-              style={{
-                border: "none",
-              }}
-            >
+            <button className="btn-disabled" disabled>
               Create your username
             </button>
           ) : (
             <button onClick={handleUsernameSubmit} className="btn-username">
-              {hideElement ? "Back to Game" : "Start Game"}
+              {currentQuestionIndex === 0 ? "Start Game" : "Back to Game"}
             </button>
           )}
         </Link>

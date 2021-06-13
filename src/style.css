@@ -34,6 +34,7 @@ body {
 
 .nav-ul {
   font-size: 1.5rem;
+  margin-top: 0;
   background-size: 50px 50px;
   background-repeat: no-repeat;
   display: flex;
