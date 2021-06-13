@@ -108,7 +108,7 @@ const Map00 = ({
     // history.push("/question");
   };
 
-  const message = inRange ? "Show question" : "Get closer";
+  const message = inRange ? "Show question" : "Get closer to the next location";
 
   return (
     <>
