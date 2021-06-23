@@ -67,7 +67,7 @@ const Map = ({
 
   const handleCurrentLocation = (e) => {
     const userCurrentLocation = e.coords;
-    setUserLocation(e);
+    setInterval(setUserLocation(e), 2000);
 
     const questionLocation = {
       latitude: currentQuestion.latitude,
