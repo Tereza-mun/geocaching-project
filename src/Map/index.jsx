@@ -67,7 +67,7 @@ const Map = ({
 
   const handleCurrentLocation = (e) => {
     const userCurrentLocation = e.coords;
-    setInterval(setUserLocation(e), 2000);
+    setUserLocation(e);
 
     const questionLocation = {
       latitude: currentQuestion.latitude,
@@ -137,7 +137,7 @@ const Map = ({
               right: 10,
               top: 10,
             }}
-            positionOptions={{ enableHighAccuracy: true }}
+            positionOptions={{ enableHighAccuracy: true, maximumAge: 0 }}
             trackUserLocation={true}
             showAccuracyCircle={false}
             onGeolocate={handleCurrentLocation}
